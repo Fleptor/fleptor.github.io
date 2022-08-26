@@ -1,0 +1,337 @@
+/* ===Declaring variables=== */
+:root {
+    --nav-bgc:#1C588C;
+    --nav-hover-bgc:#1C588C80;
+    --nav-selected-bgc:#15446e;
+    --heading-font: 'Press Start 2P', cursive;
+    --page-font: 'Orbitron', sans-serif;
+    --textBlock-font: 'Changa', sans-serif;
+    --heading-shadow:#15446e;
+    --textBlock-bgc: #1C588C8C;
+    --footer-bgc:#0e2c46;
+}
+
+/* ===FONTS=== */
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(/assets/fonts/PressStart2P.woff);
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Medium.woff);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-SemiBold.woff);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "monogram";
+    src: url(/assets/fonts/monogram.woff);
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Light.woff);
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* ===Start of CSS=== */
+.utility1{
+    width: 99%;
+    list-style: none;
+}
+
+.utility2{
+    text-align: center;
+    font-family: var(--page-font);
+    font-weight: 500;
+    color: #6dffff;
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background-image: url(/assets/backgrounds/background.png);
+    background-size: cover;
+    transform: translateY(3rem);
+    animation: FadeIn 900ms ease forwards;
+    opacity: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation <--- */
+.mainNav{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainNav a{
+    font-family: var(--page-font);
+    font-weight: bolder;
+    padding: 10px;
+    margin-inline: 12px;
+    margin-top: 25px;
+    color: white;
+    background-color: var(--nav-bgc);
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 2px;
+
+}
+
+.mainNav a:hover{
+    background-color: var(--nav-hover-bgc);
+}
+
+.mainNav a.selected, nav a.selected:hover{
+    background-color: var(--nav-selected-bgc);
+    border: #fff solid 1px;
+}
+
+ /* Main Heading <--- */
+.heading{
+    display: grid;
+    place-items: center;
+}
+
+.mainHeading{
+    margin-top: 75px;
+    margin-bottom: 50px;
+    font-size: 88px;
+    font-family: var(--heading-font);
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0px 14px var(--heading-shadow);
+}
+
+/* Page Content <--- */
+.aboutGrid{
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.aboutMe{
+    margin-left: 100px;
+    border-radius: 12px;
+    padding: 16px;
+    font-family: var(--textBlock-font);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    background-color: var(--textBlock-bgc);
+    max-width: 540px;
+    margin-block: 0 50px;
+}
+
+
+.contacts{
+    border-radius: 12px;
+    padding: 16px;
+    font-family: var(--textBlock-font);
+    color: white;
+    font-size: 20px;
+    text-align: left;
+    background-color: var(--textBlock-bgc);
+}
+
+.contacts a{
+    text-decoration: none;
+    font-family: var(--page-font);
+}
+
+.contacts a:hover{
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer{
+    background-color: #000;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: var(--page-font);
+    margin-top: auto;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.ftrCol1{
+    margin: auto;
+}
+
+.ftrCol2{
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ftrNavTop{
+    display: flex;
+}
+
+
+.ftrNavTop a{
+    margin-inline: 8px;
+    border: 1px solid #fff;
+    width: 78px;
+    padding: 8px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+
+.ftrNavTop a:hover{
+    background-color: #59b496;
+}
+
+.ftrNav{
+    color: mediumaquamarine;
+    margin-top: 16px;
+    text-align: left;
+}
+
+.ftrNav a{
+    padding-inline: 8px;
+    margin-inline: 4px;
+    color: #fff;
+    border: 1px solid white;
+    text-decoration: none;
+}
+
+.ftrNav a:hover{
+    background-color: #59b496;
+}
+
+@keyframes FadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (orientation: portrait) {
+    .mainHeading{
+        font-size: 64px;
+        text-shadow: 0px 9px var(--heading-shadow);
+    }
+
+    .aboutGrid{
+        display: flex;
+       flex-direction: column;
+       gap: 1cm;
+    }
+
+    .aboutMe{
+        margin: 0;
+    }
+
+    .contacts{
+        margin: 0;
+        margin-block: 0 50px;
+    }
+
+    .utility2{
+        font-size: 18px;
+    }
+
+    .ftrCol1{
+        font-size: 20px;
+    }
+
+    .ftrNavTop{
+        display: grid;
+    }
+}
+
+@media (orientation: landscape) and (max-width: 900px){
+
+    .aboutGrid{
+        display: flex;
+       flex-direction: column;
+       gap: 1cm;
+    }
+
+    .aboutMe{
+        margin: 0;
+    }
+
+    .contacts{
+        margin: 0;
+    }
+
+    .ftrCol1{
+        font-size: 20px;
+    }
+
+    .ftrNavTop{
+        display: flex;
+    }
+
+}
+
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track{
+    background: #ffffff33;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1C588CCC;
+}
+
+@supports(scrollbar-color: #1C588CCC #ffffff33 ){
+    * {
+        scrollbar-color: #1C588CCC #ffffff33;
+        scrollbar-width: auto;
+    }
+}
