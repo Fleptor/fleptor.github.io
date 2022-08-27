@@ -269,6 +269,7 @@ ul{
     color: #fff;
     outline: none;
     cursor: pointer;
+    font-size: 20px;
 }
 
 #bttBtn:active{
