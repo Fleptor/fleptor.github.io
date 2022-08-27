@@ -1,2 +1,2 @@
-# flepsite-devel
-Fleptor's website(Flepsite) development repository.
+# fleptor.github.io
+Fleptor's Website(Flepsite) repository.

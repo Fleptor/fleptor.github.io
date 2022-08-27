@@ -371,7 +371,7 @@ h1::before {
 
     display: flex;
     flex-direction: column;
-    gap: 2cm;
+    gap: 0.5cm;
 }
 
 .btt{

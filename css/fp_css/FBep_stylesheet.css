@@ -189,7 +189,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: auto;
+    margin-top: 50px;
     font-size: 24px;
     padding: 20px;
 }
@@ -214,11 +214,11 @@ footer{
 .ftrNavTop a{
     margin-inline: 8px;
     border: 1px solid #fff;
-    width: fit-content;
+    width: 78px;
     padding: 8px;
     text-decoration: none;
     color: #fff;
-    
+    text-align: center;
 }
 
 .ftrNavTop a:hover{
@@ -231,14 +231,12 @@ footer{
     text-align: left;
 }
 
-.ftrNavTop a{
-    margin-inline: 8px;
-    border: 1px solid #fff;
-    width: 78px;
-    padding: 8px;
-    text-decoration: none;
+.ftrNav a{
+    padding-inline: 8px;
+    margin-inline: 4px;
     color: #fff;
-    text-align: center;
+    border: 1px solid white;
+    text-decoration: none;
 }
 
 .ftrNav a:hover{
