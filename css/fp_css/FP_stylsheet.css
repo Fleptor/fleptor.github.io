@@ -198,7 +198,7 @@ hr{
 }
 
 .s1 a{
-    color: #fff;
+    color: #EAE3D2;
     text-decoration: none;
 }
 
@@ -346,11 +346,10 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
-    color: mediumaquamarine;
     margin-top: 16px;
     text-align: left;
 }
@@ -364,7 +363,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 @media (orientation: portrait){
@@ -388,8 +387,23 @@ footer{
         font-size: 44px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
+        font-size: 20px;
+    }
+
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
     }
 
     .bTTBtnContainer button{

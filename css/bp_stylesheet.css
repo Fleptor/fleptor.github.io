@@ -120,7 +120,7 @@ header{
 
 .postText {
     background-color: #F4F5FF;
-    border: solid 8px #dddddd;
+    border: solid 8px #1C588C;
     padding: 20px;
     padding-right: 40px;
     color: #000;
@@ -194,7 +194,7 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
@@ -212,7 +212,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 
@@ -232,4 +232,25 @@ footer{
         margin: 16px;
         font-size: 18px;
     }
+
+    .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
+        font-size: 20px;
+    }
+
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
+    }
+
+
 }

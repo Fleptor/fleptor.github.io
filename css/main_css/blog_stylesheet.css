@@ -315,7 +315,7 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
@@ -333,7 +333,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 @keyframes FadeIn {
@@ -380,7 +380,7 @@ footer{
 
 
     .blogTable{
-       width: 320px;
+       width: 370px;
     }
 
     th, td{
@@ -399,10 +399,20 @@ footer{
         font-size: 18px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol2{
+        font-size: 20px;
     }
 
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
+    }
 
 }
 

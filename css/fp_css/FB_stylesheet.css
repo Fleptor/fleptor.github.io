@@ -167,7 +167,7 @@ header{
 }
 
 .secondHeading{
-    font-size: 34px;
+    font-size: 32px;
     font-family: var(--page-font);
     margin-block: 28.22px 16px;
     color: #FCD900;
@@ -187,6 +187,7 @@ header{
 .s2 li{
     border: 1px solid #fff;
     padding-inline: 4px;
+    width: 100px;
 }
 
 
@@ -206,7 +207,7 @@ header{
 }
 
 .s2 a{
-    color: #3c98e9;
+    color: #EAE3D2;
     text-decoration: none;
 }
 
@@ -253,7 +254,7 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
@@ -271,7 +272,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 @media (orientation: portrait){
@@ -295,8 +296,23 @@ footer{
         font-size: 44px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
+        font-size: 20px;
+    }
+
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
     }
 
     .bTTBtnContainer button{

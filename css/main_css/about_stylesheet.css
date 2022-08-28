@@ -46,11 +46,6 @@
 }
 
 @font-face {
-    font-family: "monogram";
-    src: url(/assets/fonts/monogram.woff);
-}
-
-@font-face {
     font-family: "Changa";
     src: url(/assets/fonts/Changa-Regular.woff);
     font-weight: normal;
@@ -226,7 +221,7 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
@@ -244,7 +239,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 @keyframes FadeIn {
@@ -281,11 +276,22 @@ footer{
     }
 
     .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
         font-size: 20px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
     }
 }
 

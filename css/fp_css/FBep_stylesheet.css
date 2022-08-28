@@ -13,11 +13,6 @@
 
 /* ===FONTS=== */
 @font-face {
-    font-family: "Press Start 2P";
-    src: url(/assets/fonts/PressStart2P.woff);
-}
-
-@font-face {
     font-family: "Orbitron";
     src: url(/assets/fonts/Orbitron-Regular.woff);
     font-weight: normal;
@@ -29,25 +24,6 @@
     src: url(/assets/fonts/Orbitron-Bold.woff);
     font-weight: bold;
     font-style: normal;
-}
-
-@font-face {
-    font-family: "Orbitron";
-    src: url(/assets/fonts/Orbitron-Medium.woff);
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "Orbitron";
-    src: url(/assets/fonts/Orbitron-SemiBold.woff);
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "monogram";
-    src: url(/assets/fonts/monogram.woff);
 }
 
 @font-face {
@@ -132,14 +108,26 @@ header{
     font-size: 58px;
     max-width: 740px;
     font-family: var(--page-font);
-    margin-block: 20px 20px;
+    margin-block: 20px 5px;
     color: #FCD900;
     text-align: center;
     text-shadow: 4px 3px #FCD90080;
 }
 
+.headingSub p{
+    font-size: 26px;
+    text-align: center;
+    color: #EAE3D2;
+    width: fit-content;
+    margin-block: 0;
+    margin-inline: auto;
+    border: 1px solid #fff;
+    padding-inline: 25px;
+    background-color: #000;
+}
+
 .s1{
-    margin-block: 50px 0;
+    margin-block: 10px 0;
     margin-inline: auto;
     max-width: 740px;
     font-family: var(--textBlock-font);
@@ -163,7 +151,7 @@ header{
 }
 
 .s2{
-    margin-block: 40px 50px;
+    margin-block: 20px 50px;
     margin-inline: auto;
     max-width: 740px;
     font-family: var(--textBlock-font);
@@ -222,7 +210,7 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
@@ -240,7 +228,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 @media (orientation: portrait){
@@ -264,8 +252,23 @@ footer{
         font-size: 44px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
+        font-size: 20px;
+    }
+
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
     }
 
     .bTTBtnContainer button{

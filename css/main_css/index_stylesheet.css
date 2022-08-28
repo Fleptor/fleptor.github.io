@@ -107,7 +107,7 @@ body{
     font-weight: bolder;
     padding: 10px;
     margin-inline: 12px;
-    margin-top: 20px;
+    margin-top: 25px;
     color: white;
     background-color: var(--nav-bgc);
     width: fit-content;
@@ -127,21 +127,20 @@ body{
 
 /* Main Heading <--- */
 .mainHeading{
-    margin-top: 30px;
-    margin-bottom: 70px;
+    margin-block: 50px 50px;
     font-family: 'monogram';
     font-weight: normal;
-    font-size: 225px;
+    font-size: 200px;
     color: white;
     position: relative;
-    text-shadow: 0px 14px var(--heading-shadow);
+    text-shadow: 0px 13px var(--heading-shadow);
 }
 
 .subtitle{
     font-family: var(--page-font);
     font-weight: 400;
     font-size: 50px;
-    text-shadow: 0px 4px #1C588C;
+    text-shadow: 0px 3px #1C588C;
     color: white;
     width: fit-content;
     text-align: center;
@@ -150,10 +149,9 @@ body{
 }
 
 #downArrow a{
-    margin-top: 125px;
-    margin-bottom: 4cm;
+    margin-top: 70px;
     color: #fff;
-    font-size: 2px;
+    font-size: 1px;
     background: linear-gradient(dodgerblue, #6dffff, #fff);
     border-radius: 100px;
     text-align: center;
@@ -202,6 +200,10 @@ body{
     color: #6dffff;
 }
 
+.textBlock a:hover{
+    text-decoration: underline;
+}
+
 .btt a{
     text-decoration: none;
     padding: 4px;
@@ -213,10 +215,12 @@ body{
     font-size: 18px;
     font-weight: bolder;
     position: fixed;
+    width: 20px;
+    text-align: center;
     top: -50px;
-    left: 5px;
+    left: 1px;
     animation: arrowShrink 1s ease forwards;
-    height: 60px;
+    height: 64px;
 }
 
 .btt a:hover{
@@ -285,11 +289,10 @@ footer{
 }
 
 .ftrNavTop a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 .ftrNav{
-    color: mediumaquamarine;
     margin-top: 16px;
     text-align: left;
 }
@@ -303,7 +306,7 @@ footer{
 }
 
 .ftrNav a:hover{
-    background-color: #59b496;
+    background-color: #40c4ff;
 }
 
 
@@ -365,10 +368,7 @@ h1::before {
 }
 
 .textBlock{
-    /* display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 1cm; */
-
+    margin-block: 5cm 0;
     display: flex;
     flex-direction: column;
     gap: 0.5cm;
@@ -407,11 +407,22 @@ h1::before {
     }
 
     .ftrCol1{
+        font-size: 18px;
+    }
+
+    .ftrCol2{
         font-size: 20px;
     }
 
-    .ftrNavTop{
-        display: grid;
+    .ftrCol2 a{
+        width: 60px;
+        margin-inline: 4px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        gap: 0.4cm;
     }
 
 }
