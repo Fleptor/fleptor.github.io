@@ -118,7 +118,6 @@ body{
     font-family: var(--textBlock-font);
     color: white;
     font-size: 24px;
-    text-align: left;
     width: 386px;
     margin-block: 0 50px;
     background-color: var(--textBlock-bgc);
