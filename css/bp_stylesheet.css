@@ -23,14 +23,11 @@
 }
 
 /* ===Start of CSS=== */
-
-
 body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
     background-size: cover;
-
 }
 
 header{
@@ -75,7 +72,7 @@ header{
 
 .heading{
     margin-inline: auto;
-    width: 740px;
+    max-width: 740px;
 }
 
 .mainHeading{
@@ -88,8 +85,8 @@ header{
 }
 
 .postTextContainer{
-    display: grid;
-    place-items: center;
+    margin-inline: auto;
+    max-width: 740px;
 }
 
 .postText {
@@ -99,7 +96,6 @@ header{
     padding-right: 40px;
     color: #000;
     margin-inline: auto;
-    max-width: 740px;
     font-family: var(--textBlock-font);
     font-size: 22px;
     text-align: right;
@@ -194,6 +190,7 @@ footer{
 @media (orientation: portrait){
     .mainHeading{
         font-size: 40px;
+        text-align: center;
     }
 
     .heading{
