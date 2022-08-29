@@ -204,6 +204,11 @@ table p{
 table a{
     color: #1C588C;
     font-weight: bold;
+    text-decoration: none;
+}
+
+table a:hover{
+    text-decoration: underline;
 }
 
 #s2{
@@ -220,6 +225,7 @@ table a{
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
+    font-size: 20px;
     font-family: var(--textBlock-font);
 }
 
@@ -238,10 +244,11 @@ table a{
     box-shadow: #00000059 0px 5px 15px;
     color: white;
     font-family: var(--textBlock-font);
+    font-size: 20px;
 }
 
 h2{
-    margin: 0;
+    margin-block: 0 10px;
     font-family: var(--page-font);
     color: #6dffff;
 }
@@ -259,6 +266,16 @@ ul{
 .archBlock a{
     color: #6dffff;
     text-decoration: none;
+    font-size: 20px;
+}
+
+.archBlock a:hover{
+    text-decoration: underline;
+}
+
+.archBlock p{
+    color: #eee;
+    margin-block: -6px 0;
 }
 
 #bttBtn{

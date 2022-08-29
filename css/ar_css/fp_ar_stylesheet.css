@@ -5,7 +5,7 @@
     --nav-selected-bgc:#15446e;
     --heading-font: 'Press Start 2P', cursive;
     --page-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --textBlock-font:  "Changa";
+    --textBlock-font: "Changa";
     --heading-shadow:#15446e;
     --textBlock-bgc: #1C588C8C;
     --footer-bgc:#0e2c46;
@@ -20,32 +20,32 @@
 @font-face {
     font-family: "Changa";
     src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
 
 /* ===Start of CSS=== */
-.utility1{
-    width: 99%;
-    list-style: none;
-}
-
-.utility2{
-    text-align: center;
-    font-weight: 500;
-    color: #6dffff;
-}
-
 body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
     background-size: cover;
     transform: translateY(3rem);
-    animation: FadeIn 900ms ease forwards;
+    animation: fadeIn 900ms ease forwards;
     opacity: 0;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
 }
+
 
 /* Navigation <--- */
 .mainNav{
@@ -66,7 +66,6 @@ body{
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
-
 }
 
 .mainNav a:hover{
@@ -86,58 +85,101 @@ body{
 
 .mainHeading{
     margin-top: 75px;
-    margin-bottom: 50px;
-    font-size: 88px;
-    font-family: var(--heading-font);
+    margin-bottom: 0;
     font-size: 100px;
+    font-family: var(--heading-font);
     font-weight: bold;
     color: white;
-    text-shadow: 0px 14px var(--heading-shadow);
+    text-shadow: 0px 13px var(--heading-shadow);
+    text-align: center;
 }
 
-/* Page Content <--- */
-.aboutGrid{
+.secondHeading{
+    color: white;
+    font-family: var(--heading-font);
+    text-shadow: 0px 13px /*#ed8200*/#E8630A;
+    font-size: 100px;
+    margin-block: 6px 30px;
+}
+
+.subtitles{
+    display:grid;
+    place-items: center;
+}
+
+.subtitle{
+    font-family: var(--page-font);
+    font-weight: 400;
+    font-size: 50px;
+    text-shadow: 0px 4px #1C588C;
+    color: white;
+    width: fit-content;
+    text-align: center;
+    border-radius: 1px;
+    margin-bottom: 40px;
+}
+
+.textBlockContainer{
     display: grid;
     place-items: center;
-    grid-template-columns: 1fr 1fr;
 }
 
-.aboutMe{
-    margin-right: 100px;
-    margin-bottom: 50px;
-    border-radius: 12px;
-    padding: 16px;
-    font-family: var(--textBlock-font);
-    color: white;
-    font-size: 22px;
-    text-align: right;
-    background-color: var(--textBlock-bgc);
-    max-width: 540px;
-}
-
-
-.contacts{
+.textBlock{
     margin-inline: auto;
-    border-radius: 12px;
-    padding: 16px;
+    width: auto;
+    color: #FFF;
     font-family: var(--textBlock-font);
-    color: white;
-    font-size: 22px;
-    width: 386px;
+    padding: 20px;
+    font-size: 17px;
+    text-align: left;
     margin-block: 0 50px;
-    background-color: var(--textBlock-bgc);
+    display: flex;
+    flex-direction: column;
 }
 
-.contacts a{
+.textBlock ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5cm;
+    max-width: 852px;
+    text-align: left;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+.textBlock li{
+    border: 4px solid #fff;
+    text-align: center;
+    height: 100px;
+    width: 140px;
+    padding: 8px;
+    display: grid;
+    place-items: center;
+    background-color: #001E6CCC;
+}
+
+.textBlock a{
+    color: #EAE3D2;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: var(--page-font);
     text-decoration: none;
 }
 
-.contacts a:hover{
+.textBlock a:hover{
     text-decoration: underline;
 }
 
+.textBlock p{
+    margin: 0;
+    padding-bottom: 20px;
+    padding-left:20px;
+    padding-right: 20px;
+}
 
-/* Footer */
 footer{
     background-color: #000;
     color: white;
@@ -181,6 +223,7 @@ footer{
 }
 
 .ftrNav{
+    color: mediumaquamarine;
     margin-top: 16px;
     text-align: left;
 }
@@ -197,37 +240,29 @@ footer{
     background-color: #40c4ff;
 }
 
-@keyframes FadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
-@media (orientation: portrait) {
+
+
+@media (orientation: portrait){
     .mainHeading{
-        font-size: 64px;
-        text-shadow: 0px 9px var(--heading-shadow);
+        font-size: 45px;
+        text-shadow: 0px 6px var(--heading-shadow);
     }
 
-    .aboutGrid{
-        display: flex;
-       flex-direction: column;
-       gap: 1cm;
+    .secondHeading{
+        font-size: 45px;
+        text-shadow: 0px 6px #ed8200;
+        margin-block: 1px 30px;
     }
 
-    .aboutMe{
+    .subtitle{
+        font-size: 42px;
+    }
+
+    .textBlock{
         margin: 0;
-    }
-
-    .contacts{
-        margin: 0;
-        margin-block: 0 50px;
-    }
-
-    .utility2{
-        font-size: 18px;
+        width: auto;
     }
 
     .ftrCol1{
@@ -251,19 +286,30 @@ footer{
 }
 
 @media (orientation: landscape) and (max-width: 900px){
+    .mainHeading{
+        font-size: 88px;
+        text-shadow: 0px 12px var(--heading-shadow);
 
-    .aboutGrid{
-        display: flex;
-       flex-direction: column;
-       gap: 1cm;
+    }
+    .secondHeading{
+        font-size: 88px;
+        text-shadow: 0px 12px #ed8200;
     }
 
-    .aboutMe{
-        margin: 0;
+    .textBlock{
+        padding: 0;
     }
 
-    .contacts{
-        margin: 0;
+    ul{
+        padding: 0;
+    }
+
+    .textBlock li{
+        width: 140px;
+    }
+
+    .textBlock a{
+        font-size: 18px;
     }
 
     .ftrCol1{
@@ -273,9 +319,15 @@ footer{
     .ftrNavTop{
         display: flex;
     }
-
 }
 
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 ::-webkit-scrollbar{
     width: 8px;
@@ -294,5 +346,21 @@ footer{
     * {
         scrollbar-color: #1C588CCC #ffffff33;
         scrollbar-width: auto;
+    }
+}
+
+
+
+@-moz-document url-prefix(){
+    .secondHeading{
+        margin-block: -16px 30px;
+    }
+}
+
+@-moz-document url-prefix() {
+    @media (orientation: portrait) {
+        .secondHeading{
+            margin-block: -7px 30px;
+        }
     }
 }

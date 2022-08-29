@@ -4,9 +4,9 @@
     --nav-bgc:#1C588C;
     --nav-hover-bgc:#1C588C80;
     --nav-selected-bgc:#15446e;
-    --heading-font: 'Press Start 2P', cursive;
+    --heading-font: "Press Start 2P";
     --page-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --textBlock-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --textBlock-font: "Changa";
     --heading-shadow: #15446e;
     --textBlock-bgc: #1C588C8C;
     --footer-bgc:#0e2c46;
@@ -18,7 +18,19 @@
     src: url(/assets/fonts/PressStart2P.woff);
 }
 
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
 
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* ===Start of CSS=== */
 body{
@@ -95,7 +107,7 @@ body{
     margin-inline: 30px;
     color: #97ffff;
     font-size: 28px;
-    font-family: var(--page-font);
+    font-family: var(--textBlock-font);
     font-weight: 500;
     text-decoration: none;
 }
@@ -152,6 +164,11 @@ table p{
 table a{
     color: #1C588C;
     font-weight: bold;
+    text-decoration: none;
+}
+
+table a:hover{
+    text-decoration: underline;
 }
 
 #s2{
@@ -167,6 +184,7 @@ table a{
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
+    font-size: 20px;
     font-family: var(--textBlock-font);
 }
 
@@ -184,10 +202,11 @@ table a{
     box-shadow: #00000059 0px 5px 15px;
     color: white;
     font-family: var(--textBlock-font);
+    font-size: 20px;
 }
 
 h2{
-    margin: 0;
+    margin-block: 0 10px;
     font-family: var(--page-font);
     color: #6dffff;
 }
@@ -205,6 +224,16 @@ ul{
 .archBlock a{
     color: #6dffff;
     text-decoration: none;
+    font-size: 20px;
+}
+
+.archBlock a:hover{
+    text-decoration: underline;
+}
+
+.archBlock p{
+    color: #eee;
+    margin-block: -6px 0;
 }
 
 #bttBtn{
