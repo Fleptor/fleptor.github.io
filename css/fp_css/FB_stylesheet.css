@@ -200,8 +200,6 @@ header{
     width: 100px;
 }
 
-
-
 .s2{
     margin-block: 40px 0;
     margin-inline: auto;
@@ -329,4 +327,24 @@ footer{
         right: 50px;
     }
 
+}
+
+::-webkit-scrollbar{
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track{
+    background: #ffffff33;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #1C588CCC;
+}
+
+@supports(scrollbar-color: #1C588CCC #ffffff33 ){
+    * {
+        scrollbar-color: #1C588CCC #ffffff33;
+        scrollbar-width: auto;
+    }
 }
