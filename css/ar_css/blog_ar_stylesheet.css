@@ -207,7 +207,8 @@ table a:hover{
 
 h2{
     margin-block: 0 10px;
-    font-family: var(--page-font);
+    font-family: var(--textBlock-font);
+    font-weight: normal;
     color: #6dffff;
 }
 
@@ -244,7 +245,7 @@ ul{
     color: #fff;
     outline: none;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 #bttBtn:active{
