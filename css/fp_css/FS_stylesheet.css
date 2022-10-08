@@ -138,13 +138,17 @@ header{
 }
 
 .mainHeading{
-    font-size: 68px;
+    font-size: 88px;
     max-width: 740px;
-    font-family: var(--heading-font);
-    margin-block: 20px 20px;
-    color:#fff;
+    font-family: var(--page-font);
+    margin-block: 20px 5px;
+    color:#FCD900;
     text-align: center;
-    text-shadow: 10px 10px 10px var(--heading-shadow);
+    text-shadow: 7px 9px #FCD90080;
+}
+
+.subtitle{
+    font-family: var(--page-font);
 }
 
 .s1{
@@ -163,26 +167,31 @@ header{
     text-align: center;
 }
 
-.s1 img{
-    width: 70%;
+.s2{
+    display: flex;
+    flex-direction: column;
+    margin-block: 50px 0;
     margin-inline: auto;
-    border: 1px solid #fff;
-    box-shadow: #ffffff80 0px 5px 15px;
-}
-
-
-.s1 p{
-    margin-block: 0;
-}
-
-.s1 a{
+    max-width: 740px;
+    font-family: var(--textBlock-font);
+    font-size: 28px;
+    padding: 20px;
+    color: #fff;
+    background-color: #1C588C80;
+    border: 4px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     text-align: center;
-    color: #EAE3D2;
-    text-decoration: none;
 }
 
-.s1 a:hover{
-    text-decoration: underline;
+.s2 img{
+    width: 80%;
+    margin-inline: auto;
+    border: 2px solid #fff;
+    box-shadow: #ffffff59 0px 5px 15px;
+}
+
+.s2 p{
+    margin-block: 10px;
 }
 
 footer{

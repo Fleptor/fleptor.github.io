@@ -93,8 +93,9 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-image: url(/assets/backgrounds/backgroundCt.png);
+    background-repeat: repeat;
+    background-size: 80%;
 }
 
  /* Navigation <--- */
