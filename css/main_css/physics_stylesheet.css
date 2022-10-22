@@ -1,0 +1,30 @@
+body{
+    background-color:dimgrey;
+}
+
+h1{
+    outline: 4px black solid;
+    color: wheat;
+    margin-inline: auto;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: grey;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.imgContainer{
+    max-width: 800px;
+    margin: auto;
+}
+
+img {
+    width: 100%;
+    outline: 6px black solid;
+}
+
+p{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: wheat;
+    font-size: 22px;
+}
