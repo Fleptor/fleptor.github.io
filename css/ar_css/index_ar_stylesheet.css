@@ -30,7 +30,11 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-attachment: fixed;
+    background-size: 100%;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
  /* Navigation <--- */
@@ -133,7 +137,8 @@ body{
     font-size: 22px;
     color: white;
     text-align: right;
-    margin: auto;
+    margin-inline: auto;
+    margin-block: 0 50px;
     background-color: #1C588C80;
     max-width: 640px;
     padding: 20px;
@@ -195,7 +200,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: 50px;
+    margin-top: auto;
     font-size: 24px;
     padding: 20px;
 }

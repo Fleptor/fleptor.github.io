@@ -93,9 +93,12 @@
 body{
     padding: 0px;
     margin: 0px;
-    background-image: url(/assets/backgrounds/backgroundCt.png);
-    background-repeat: repeat;
-    background-size: 80%;
+    background-image: url(/assets/backgrounds/background.png);
+    background-attachment: fixed;
+    background-size: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
  /* Navigation <--- */
@@ -194,7 +197,8 @@ body{
     font-size: 16px;
     color: white;
     text-align: left;
-    margin: auto;
+    margin-inline: auto;
+    margin-block: 0 50px;
     background-color: #1C588C80;
     max-width: 640px;
     padding: 20px;
@@ -262,7 +266,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: 50px;
+    margin-top: auto;
     font-size: 24px;
     padding: 20px;
 }
@@ -386,6 +390,12 @@ h1::before {
 }
 
 @media (orientation: portrait) {
+    body{
+    background-size:cover;
+    
+    
+    }
+
 
     .mainHeading{
         margin-block: 50px 50px;
@@ -414,6 +424,7 @@ h1::before {
 
     .ftrCol1{
         font-size: 18px;
+	text-align: center;
     }
 
     .ftrCol2{

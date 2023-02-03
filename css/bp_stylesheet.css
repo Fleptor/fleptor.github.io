@@ -27,7 +27,11 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -137,6 +141,7 @@ footer{
     font-family: var(--page-font);
     font-size: 24px;
     padding: 30px;
+    margin-top: auto;
 }
 
 .ftrCol1{

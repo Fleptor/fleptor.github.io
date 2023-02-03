@@ -48,7 +48,11 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -96,6 +100,7 @@ header{
     color: #fff;
     background-color: var(--textBlock-bgc);
     box-shadow: #ffffff 0px 5px 15px;
+    margin-block: 0 50px;
 }
 
 .textBlockTwo{
@@ -108,8 +113,9 @@ header{
 }
 
 .textBlockTwo p{
-    text-align: center;
+    text-align: left;
     margin: 0;
+    font-family: system-ui;
 }
 
 li{
@@ -136,7 +142,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: 50px;
+    margin-top: auto;
     font-size: 24px;
     padding: 20px;
 }

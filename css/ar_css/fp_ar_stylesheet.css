@@ -37,7 +37,8 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     transform: translateY(3rem);
     animation: fadeIn 900ms ease forwards;
     opacity: 0;
@@ -245,6 +246,9 @@ footer{
 
 
 @media (orientation: portrait){
+	body{
+	background-size: cover;
+}
     .mainHeading{
         font-size: 45px;
         text-shadow: 0px 6px var(--heading-shadow);

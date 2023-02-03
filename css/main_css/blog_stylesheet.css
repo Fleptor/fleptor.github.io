@@ -76,11 +76,15 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/assets/backgrounds/blogBackground.png);
-    background-size: cover;
+    background-image: url(/assets/backgrounds/background.png);
+    background-attachment: fixed;
+    background-size: 100%;
     transform: translateY(3rem);
     animation: FadeIn 900ms ease forwards;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .mainNav{
@@ -245,6 +249,7 @@ table a:hover{
     color: white;
     font-family: var(--textBlock-font);
     font-size: 20px;
+    margin-block: 0 50px;
 }
 
 h2{
@@ -295,12 +300,12 @@ background-color: var(--nav-selected-bgc);
 }
 
 footer{
+    margin-top: auto;
     background-color: #000;
     color: white;
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: 50px;
     font-size: 24px;
     padding: 20px;
 }
@@ -383,6 +388,10 @@ footer{
 
 
 @media (orientation: portrait){
+	body{
+	background-size: cover;
+	
+	}
     .mainHeading{
         font-size: 80px;
         text-shadow: 0px 11px var(--heading-shadow);

@@ -83,10 +83,14 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: cover;
+    background-size: 100%;
+    background-attachment: fixed;
     transform: translateY(3rem);
     animation: FadeIn 900ms ease forwards;
     opacity: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -139,12 +143,11 @@ header{
 
 .mainHeading{
     font-size: 88px;
-    max-width: 740px;
     font-family: var(--page-font);
     margin-block: 20px 5px;
     color:#FCD900;
     text-align: center;
-    text-shadow: 7px 9px #FCD90080;
+    text-shadow: 4px 3px #FCD90080;
 }
 
 .subtitle{
@@ -152,8 +155,6 @@ header{
 }
 
 .s1{
-    display: flex;
-    flex-direction: column;
     margin-block: 50px 0;
     margin-inline: auto;
     max-width: 740px;
@@ -200,7 +201,7 @@ footer{
     display: flex;
     flex-direction: row;
     font-family: var(--page-font);
-    margin-top: 50px;
+    margin-top: auto;
     font-size: 24px;
     padding: 20px;
 }
@@ -255,7 +256,9 @@ footer{
 }
 
 @media (orientation: portrait){
-
+    body{
+    background-size: cover;
+}    
     header{
         gap: 1cm;
     }
@@ -268,7 +271,7 @@ footer{
 
     .mainHeading{
         padding-inline: 0;
-        font-size: 44px;
+        font-size: 48px;
     }
 
     .ftrCol1{
