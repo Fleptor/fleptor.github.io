@@ -53,7 +53,8 @@ body{
     padding: 0;
     background-image: url(/assets/backgrounds/background.png);
     background-size: cover;
-    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 header{

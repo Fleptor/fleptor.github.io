@@ -77,8 +77,9 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: 100%;
     background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
 }
 
 header{
@@ -360,9 +361,6 @@ footer{
 }
 
 @media (orientation: portrait){
-    body{
-    background-size: cover;
-    }
     header{
         gap: 1cm;
     }

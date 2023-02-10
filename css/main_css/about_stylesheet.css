@@ -84,7 +84,8 @@ body{
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
     background-attachment: fixed;
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     transform: translateY(3rem);
     animation: FadeIn 900ms ease forwards;
     opacity: 0;
@@ -252,10 +253,6 @@ footer{
 
 
 @media (orientation: portrait) {
-	body{
-  	   background-size: cover;	
-	
-	}
 
     .mainHeading{
         font-size: 64px;

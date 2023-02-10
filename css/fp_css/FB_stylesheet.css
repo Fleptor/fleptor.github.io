@@ -83,7 +83,8 @@ body{
     margin: 0;
     padding: 0;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     transform: translateY(3rem);
     animation: FadeIn 900ms ease forwards;
@@ -288,9 +289,6 @@ footer{
 }
 
 @media (orientation: portrait){
-    body{
-    background-size: cover;
-    }
     header{
         gap: 1cm;
     }

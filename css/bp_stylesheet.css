@@ -27,8 +27,9 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;

@@ -37,8 +37,9 @@ body{
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/background.png);
-    background-size: 100%;
+    background-size: cover;
     background-attachment: fixed;
+    background-position: center;
     transform: translateY(3rem);
     animation: fadeIn 900ms ease forwards;
     opacity: 0;
