@@ -305,7 +305,8 @@ footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.5cm;
     font-family: var(--page-font);
     margin-top: 50px;
     font-size: 24px;

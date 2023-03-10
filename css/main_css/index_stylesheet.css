@@ -207,8 +207,9 @@ body{
 }
 
 .textBlock a{
+    font-size: 18px;
     text-decoration: none;
-    color: #6dffff;
+    color:#EAE3D2; 
 }
 
 .textBlock a:hover{
@@ -265,7 +266,9 @@ footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.5cm;
+    text-align: center;
     font-family: var(--page-font);
     margin-top: auto;
     font-size: 24px;

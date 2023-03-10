@@ -1,6 +1,7 @@
 /* ===Declaring Variables=== */
 :root{
     scroll-behavior: smooth;
+    scroll-padding: 5rem;
     --nav-bgc:#1C588C;
     --nav-hover-bgc:#1C588C80;
     --nav-selected-bgc:#15446e;
@@ -81,12 +82,10 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transform: translateY(3rem);
-    animation: FadeIn 900ms ease forwards;
-    opacity: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .mainNav{
@@ -115,7 +114,7 @@ body{
 
 .mainNav a.selected, nav a.selected:hover{
     background-color: var(--nav-selected-bgc);
-    border: #fff solid 1px;
+    border: #fff solid 0.5px;
 }
 
 .heading{
@@ -133,24 +132,53 @@ body{
     text-shadow: 0px 14px var(--heading-shadow);
 }
 
-.blogContentNavContainer{
-    display: grid;
-    place-items: center;
+.mobileSidebar{
+    padding-block: 2px;
     position: sticky;
     top: 0;
+    width: 85vw;
+    margin-inline: auto;
+    background-color: var(--nav-selected-bgc);
+    border: 4px solid #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    box-shadow: #00000059 0px 5px 15px;
 }
 
+.mobileSidebar a{
+    color: #97ffff;
+    font-size: 28px;
+    font-family: var(--textBlock-font);
+    font-weight: 500;
+    text-decoration: none;
+    margin-inline: 15px;
+}
+
+
+.blogContent{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 .blogContentNav{
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     border: 4px solid #fff;
-    padding: 20px;
-    width: 902px;
+    width: 50px;
+    height: 232px;
+    padding-block: 32px;
+    padding-inline: 2px;
     background-color: var(--nav-selected-bgc);
     box-shadow: #00000059 0px 5px 15px;
 }
 
 .blogContentNav a{
-    margin-inline: 30px;
+    padding-block: 10px;
     color: #97ffff;
     font-size: 28px;
     font-family: var(--page-font);
@@ -163,58 +191,80 @@ body{
 }
 
 #s1{
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
     margin-top: 20px;
+    max-width: 902px;
+    padding: 20px;
+    border: 4px solid #fff;
+    background-color: var(--textBlock-bgc);
+    box-shadow: #00000059 0px 5px 15px;
+    text-align: left;
 }
 
-.blogTable{
-    border-collapse: collapse;
-    font-size: 16px;
-    border: 4px solid #E1E3E0;
-    width: 950px;
+#s1 p{
+   font-family: "Changa";
+   font-size: 14px; 
+   color: #fff;
+   padding-left: 20px;
+   margin-block: 0;
+}
+
+#s1 .postInfo{
+    padding-inline: 20px;
+    color: #ccc;
+    font-family: var(--page-font);
+    font-size: 12px;
+}
+
+.postsSeperation{
+    margin: 0 0 10px 0;
+    width: 80%;
+}
+.postsList{
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 0;
+    flex-basis: 400px;
+    list-style: none;
+    background-color: #23395d;
+    box-shadow: #00000059 0px 5px 15px;
+    height: 400px;
+    overflow: scroll;
+}
+
+.pinnedPostsList{
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 0;
+    flex-basis: 400px;
+    list-style: none;
+    background-color: #23395d;
     box-shadow: #00000059 0px 5px 15px;
 }
 
-thead, th{
-    background-color: #1C588CB3;
-    text-align: left;
-    font-family: var(--page-font);
-    color: #fff;
-}
-
-th, td{
-    padding: 15px 15px;
-    text-align: right;
-}
-
-td {
-    max-width: 480px;
-}
-
-tbody tr{
-    font-family: var(--textBlock-font);
-    border-bottom: 1px solid #aaa;
-    background: white;
-}
-
-tbody tr:nth-of-type(even) {
-    background-color: #f2f2f2;
-}
-
-table p{
-    margin: 0;
-    color: #a4a4a4;
-}
-
-table a{
-    color: #1C588C;
-    font-weight: bold;
+#s1 a{
+    color: #EAE3D2;
     text-decoration: none;
+    font-family:var(--textBlock-font);
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 1px 2px #15446e;
 }
 
-table a:hover{
+#s1 a:hover{
     text-decoration: underline;
+}
+
+.listBullet{
+   color: #fff;
+   font-size: 26px;
+   font-family: var(--page-font);
+}
+
+#s1 h2{
+    margin: 0;
 }
 
 #s2{
@@ -227,7 +277,7 @@ table a:hover{
     text-align: left;
     border: 4px solid #E1E3E0;
     padding: 20px;
-    width: 902px;
+    max-width: 902px;
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
@@ -245,7 +295,7 @@ table a:hover{
     text-align: left;
     border: 4px solid #E1E3E0;
     padding: 20px;
-    width: 902px;
+    max-width: 902px;
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
@@ -255,7 +305,7 @@ table a:hover{
 }
 
 h2{
-    margin-block: 0 10px;
+    margin-block: 0 5px;
     font-family: var(--page-font);
     color: #6dffff;
 }
@@ -271,7 +321,7 @@ ul{
 }
 
 .archBlock a{
-    color: #6dffff;
+    color: #EAE3D2;
     text-decoration: none;
     font-size: 20px;
 }
@@ -286,6 +336,7 @@ ul{
 }
 
 #bttBtn{
+    padding: 0;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -306,7 +357,8 @@ footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.5cm;
     font-family: var(--page-font);
     font-size: 24px;
     padding: 20px;
@@ -388,37 +440,16 @@ footer{
     }
 }
 
-
-@media (orientation: portrait){
-	
+@media (max-width: 480px){
+	#s1{
+	flex-direction: column;
+}
+    .blogContentNav{
+	display: none;
+}
     .mainHeading{
         font-size: 80px;
         text-shadow: 0px 11px var(--heading-shadow);
-    }
-
-    .blogContentNav{
-        width: auto;
-    }
-
-    .blogContentNav a{
-        margin-inline: 8px;
-    }
-
-
-    .blogTable{
-       width: 370px;
-    }
-
-    th, td{
-        padding: 12px;
-    }
-
-    .plansBlock{
-        width: 320px;
-    }
-
-    .archBlock{
-        width: 320px;
     }
 
     .ftrCol1{
@@ -430,45 +461,20 @@ footer{
     }
 
     .ftrCol2 a{
-        width: 60px;
+        width: 62px;
         margin-inline: 4px;
     }
-
-    footer{
-        display: flex;
-        flex-direction: column;
-        gap: 0.4cm;
-    }
-
 }
 
-@media (orientation: landscape) and (max-width: 900px){
-
-    .blogContentNav{
-        width: auto;
-    }
-
-    .blogContentNav a{
-        margin-inline: 8px;
-    }
-
-    .blogTable{
-        max-width: 770px;
-    }
-
-    .plansBlock{
-        max-width: 722px;
-    }
-
-    .archBlock{
-        max-width: 722px;
-    }
-
-    .ftrCol1{
-        font-size: 20px;
-    }
-
-    .ftrNavTop{
-        display: flex;
+@media (min-width: 481px) and (max-width: 1280px){
+    .mobileSidebar{
+        display: none;
     }
 }
+
+@media (min-width: 1280px){
+    .mobileSidebar{
+        display: none;
+    }
+}    
+

@@ -1,6 +1,7 @@
 /* ===Declaring Variables=== */
 :root{
     scroll-behavior: smooth;
+    scroll-padding: 5rem;
     --nav-bgc:#1C588C;
     --nav-hover-bgc:#1C588C80;
     --nav-selected-bgc:#15446e;
@@ -40,9 +41,10 @@ body{
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    transform: translateY(3rem);
-    animation: FadeIn 900ms ease forwards;
-    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-height: 100dvh;
 }
 
 .mainNav{
@@ -52,8 +54,9 @@ body{
 }
 
 .mainNav a{
-    font-family: var(--page-font);
-    font-weight: bolder;
+    font-family: var(--textBlock-font);
+    font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     margin-inline: 12px;
     margin-top: 25px;
@@ -89,24 +92,51 @@ body{
     text-shadow: 0px 14px var(--heading-shadow);
 }
 
-.blogContentNavContainer{
-    display: grid;
-    place-items: center;
+.mobileNavBar{
+    padding-block: 2px;
     position: sticky;
     top: 0;
-}
-
-.blogContentNav{
-    text-align: center;
-    border: 4px solid #fff;
-    padding: 20px;
-    width: 902px;
+    width: 85vw;
+    margin-inline: auto;
     background-color: var(--nav-selected-bgc);
+    border: 4px solid #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     box-shadow: #00000059 0px 5px 15px;
 }
 
+.mobileNavBar a{
+    color: #97ffff;
+    font-size: 28px;
+    font-family: var(--textBlock-font);
+    font-weight: 500;
+    text-decoration: none;
+    margin-inline: 15px;
+}
+
+.blogContent{
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.blogContentNav{
+    margin-top: 20px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: 4px solid #fff;
+    width: 50px;
+    height: 232px;
+    padding-block: 32px;
+    padding-inline: 2px;
+    background-color: var(--nav-selected-bgc);
+    box-shadow: #00000059 0px 5px 15px;
+}
 .blogContentNav a{
-    margin-inline: 30px;
     color: #97ffff;
     font-size: 28px;
     font-family: var(--textBlock-font);
@@ -119,58 +149,79 @@ body{
 }
 
 #s1{
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 1cm;
     margin-top: 20px;
-}
-
-.blogTable{
-    border-collapse: collapse;
-    font-size: 16px;
-    border: 4px solid #E1E3E0;
-    width: 950px;
+    max-width: 902px;
+    padding: 20px;
+    border: 4px solid #fff;
+    background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
 }
 
-thead, th{
-    background-color: #1C588CB3;
-    text-align: left;
-    font-family: var(--page-font);
-    color: #fff;
+#s1 p{
+   font-family: "Changa";
+   font-size: 14px; 
+   color: #fff;
+   padding-right: 20px;
+   margin-block: 0;
 }
 
-th, td{
-    padding: 15px 15px;
-    text-align: right;
-}
-
-td {
-    max-width: 480px;
-}
-
-tbody tr{
+#s1 .postInfo{
+    padding-inline: 20px;
+    color: #ccc;
     font-family: var(--textBlock-font);
-    border-bottom: 1px solid #aaa;
-    background: white;
+    font-size: 14px;
 }
 
-tbody tr:nth-of-type(even) {
-    background-color: #f2f2f2;
+.postsSeperation{
+    margin: 0 0 10px 0;
+    width: 80%;
+}
+.postsList{
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 0;
+    flex-basis: 400px;
+    list-style: none;
+    background-color: #23395d;
+    box-shadow: #00000059 0px 5px 15px;
+    height: 400px;
+    overflow: scroll;
 }
 
-table p{
-    margin: 0;
-    color: #a4a4a4;
+.pinnedPostsList{
+    border: 1px solid #fff;
+    padding: 10px;
+    margin-top: 0;
+    flex-basis: 400px;
+    list-style: none;
+    background-color: #23395d;
+    box-shadow: #00000059 0px 5px 15px;
 }
 
-table a{
-    color: #1C588C;
-    font-weight: bold;
+#s1 a{
+    color: #EAE3D2;
     text-decoration: none;
+    font-family:var(--textBlock-font);
+    font-weight: bold;
+    font-size: 22px;
+    text-shadow: 1px 2px #15446e;
 }
 
-table a:hover{
+#s1 a:hover{
     text-decoration: underline;
+}
+
+.listBullet{
+   color: #fff;
+   font-size: 26px;
+   font-family: var(--page-font);
+}
+
+#s1 h2{
+    margin: 0;
 }
 
 #s2{
@@ -182,7 +233,7 @@ table a:hover{
 .plansBlock{
     border: 4px solid #E1E3E0;
     padding: 20px;
-    width: 902px;
+    max-width: 902px;
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
@@ -199,7 +250,7 @@ table a:hover{
 .archBlock{
     border: 4px solid #E1E3E0;
     padding: 20px;
-    width: 902px;
+    max-width: 902px;
     background-color: var(--textBlock-bgc);
     box-shadow: #00000059 0px 5px 15px;
     color: white;
@@ -208,7 +259,7 @@ table a:hover{
 }
 
 h2{
-    margin-block: 0 10px;
+    margin-block: 0;
     font-family: var(--textBlock-font);
     font-weight: normal;
     color: #6dffff;
@@ -255,14 +306,15 @@ background-color: var(--nav-selected-bgc);
 }
 
 footer{
+    margin-top: auto;
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
-    font-family: var(--page-font);
-    margin-top: 50px;
+    flex-direction: column;
+    gap: 0.5cm;
+    font-family: var(--textBlock-font);
     font-size: 24px;
-    padding: 20px;
+    padding-block: 20px;
 }
 
 .ftrCol1{
@@ -341,36 +393,16 @@ footer{
     }
 }
 
-
-@media (orientation: portrait){
+@media (max-width: 480px){
+	#s1{
+	flex-direction: column;
+}
+    .blogContentNav{
+	display: none;
+}
     .mainHeading{
         font-size: 80px;
         text-shadow: 0px 11px var(--heading-shadow);
-    }
-
-    .blogContentNav{
-        width: auto;
-    }
-
-    .blogContentNav a{
-        margin-inline: 8px;
-    }
-
-
-    .blogTable{
-       width: 370px;
-    }
-
-    th, td{
-        padding: 12px;
-    }
-
-    .plansBlock{
-        width: 320px;
-    }
-
-    .archBlock{
-        width: 320px;
     }
 
     .ftrCol1{
@@ -382,45 +414,20 @@ footer{
     }
 
     .ftrCol2 a{
-        width: 60px;
+        width: 62px;
         margin-inline: 4px;
     }
-
-    footer{
-        display: flex;
-        flex-direction: column;
-        gap: 0.4cm;
-    }
-
 }
 
-@media (orientation: landscape) and (max-width: 900px){
-
-    .blogContentNav{
-        width: auto;
-    }
-
-    .blogContentNav a{
-        margin-inline: 8px;
-    }
-
-    .blogTable{
-        max-width: 770px;
-    }
-
-    .plansBlock{
-        max-width: 722px;
-    }
-
-    .archBlock{
-        max-width: 722px;
-    }
-
-    .ftrCol1{
-        font-size: 20px;
-    }
-
-    .ftrNavTop{
-        display: flex;
+@media (min-width: 481px) and (max-width: 1280px){
+    .mobileNavBar{
+        display: none;
     }
 }
+
+@media (min-width: 1280px){
+    .mobileNavBar{
+        display: none;
+    }
+}    
+

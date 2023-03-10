@@ -11,45 +11,46 @@
 </head>
 <body>
     <nav id="s0" class="mainNav">
-        <a href="/ar_pages/index_ar.html">الرئيسية</a>
-        <a href="/ar_pages/about_ar.html">حولي</a>
-        <a class="selected" href="/blog_ar.html">المدونة</a>
-        <a href="/ar_pages/fp_ar.html">⠀fp⠀</a>
+        <a href="/ar/index.html">الرئيسية</a>
+        <a href="/ar/about.html">حولي</a>
+        <a class="selected" href="/ar/blog.html">المدونة</a>
+        <a href="/ar/fp.html">⠀fp⠀</a>
     </nav>
     <div class="heading">
         <h1 class="mainHeading">BLOG</h1>
     </div>
 
-    <div class="blogContentNavContainer">
-    <div class="blogContentNav">
-              <a href="#s1">المنشورات</a>
-              <a href="#s2">الأهداف</a>
-              <a href="#s3">الأرشيف</a>
-              <a style="margin:0; color:#fff;" href="#s0"><button id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button></a>
-    </div>
+<div class="mobileNavBar">
+      <a href="#s1" class="mobileUI"><i class="fa-regular fa-file-lines"></i></a>
+      <a href="#s2" class="mobileUI"><i class="fa-regular fa-square-check"></i></a>
+      <a href="#s3" class="mobileUI"><i class="fa-sharp fa-regular fa-file-zipper"></i></a>
+      <a style="margin:0; color:#fff;" href="#s0"><button id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button></a>
 </div>
-
-
-
     <div class="blogContent">
-        <div id="s1">
-            <table class="blogTable">
-            <thead>
-                <th>#</th>
-                <th>العنوان</th>
-                <th>التاريخ</th>
-                <th>الموضوع</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>01</td>
-                    <td><a href="/blog/p1.html">أعمال فوق أعمال</a><br><p></p></td>
-                    <td>2022-08-29</td>
-                    <td>شخصي</td>
-                </tr>
-            </tbody>
-        </table>
+    <div class="blogContentNav">
+      <a href="#s1" class="mobileUI"><i class="fa-regular fa-file-lines"></i></a>
+      <a href="#s2" class="mobileUI"><i class="fa-regular fa-square-check"></i></a>
+      <a href="#s3" class="mobileUI"><i class="fa-sharp fa-regular fa-file-zipper"></i></a>
+      <a style="margin:0; color:#fff;" href="#s0"><button id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button></a>
     </div>
+    <div class="restOfBlog">
+        <div id="s1">
+	<ol class="postsList">
+		<h2>المنشورات:</h2>
+		<hr>
+		<li><span class="listBullet">1) </span><a href="/blog/p1.html">أعمال فوق أعمال</a></li>
+		<p>سبب العمل على فلِبنس بارادايس وتصميم فلِبسايت في هذا الوقت، ومستقبل فلِبنس برودكاست.</p>
+		<span class="postInfo">نشرت: 29-08-2022 - شخصي</span>
+		<!--	<hr class="postsSeperation"> -->
+	</ol>
+
+       <ol class="pinnedPostsList">
+	       <h2>المنشورات المثبتة:</h2>
+	       <hr>
+	       <p style="font-size: 24px">(لا شيء لتثبيته هنا بعد!)</p>
+       </ol>
+	</div>
+
         <div id="s2">
             <div class="plansBlock">
                 <h2>الأهداف:</h2>
@@ -104,15 +105,16 @@
                 </ul>
         </div>
         </div>
-
+    </div>
+    </div>
 
         <footer>
             <div class="ftrCol2">
                 <nav class="ftrNavTop">
-                    <a href="/ar_pages/index_ar.html">الرئيسية</a>
-                    <a href="/ar_pages/about_ar.html">حولي</a>
-                    <a href="/ar_pages/blog_ar.html">المدونة</a>
-                    <a href="/ar_pages/fp_ar.html">⠀fp⠀</a>
+                    <a href="/ar/index.html">الرئيسية</a>
+                    <a href="/ar/about.html">حولي</a>
+                    <a href="/ar/blog.html">المدونة</a>
+                    <a href="/ar/fp.html">⠀fp⠀</a>
                 </nav>
                 <nav class="ftrNav">
                     <a href="/credits.html">الإعتمادات</a>
@@ -122,7 +124,7 @@
     
     
         <div class="ftrCol1">
-           بلال جمال حمدان - 2023
+ بلال جمال حمدان - 2023
         </div>
     </footer>
 </body>

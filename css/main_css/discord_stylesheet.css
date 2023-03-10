@@ -53,9 +53,6 @@ body{
     transform: translateY(3rem);
     animation: fadeIn 1s ease forwards;
     opacity: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 h1{
@@ -325,7 +322,8 @@ footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0,5cm;
     font-family: var(--page-font);
     margin-top: auto;
     font-size: 24px;
@@ -384,6 +382,14 @@ footer{
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+@media (max-width: 400px){
+    .inviteContainer img{
+        display: none;
+}
+    .inviteMsg{
+	margin: auto;
     }
 }
 

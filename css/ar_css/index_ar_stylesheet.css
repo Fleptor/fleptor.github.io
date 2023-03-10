@@ -6,7 +6,7 @@
     --nav-selected-bgc:#15446e;
     --heading-font: 'monogram';
     --page-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --textBlock-font:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --textBlock-font: "Changa";
     --heading-shadow: #15446e;
     --textBlock-bgc: #1C588C8C;
 }
@@ -14,6 +14,31 @@
 @font-face {
     font-family: "monogram";
     src: url(/assets/fonts/monogram.woff);
+}
+@font-face {
+    font-family: "Press Start 2P";
+    src: url(/assets/fonts/PressStart2P.woff);
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: "Orbitron";
+    src: url(/assets/fonts/Orbitron-Regular.woff);
+    font-weight: bold;
+    font-style: normal;
 }
 /* ===Start of CSS=== */
 .utility1{
@@ -23,7 +48,8 @@
 
 .utility2{
     text-align: center;
-    font-family: var(--page-font);
+    font-family: var(--textBlock-font);
+    font-weight: normal;
 }
 
 body{
@@ -49,12 +75,12 @@ body{
 }
 
 .mainNav a{
-    font-family: var(--page-font);
-    font-size: 20px;
-    font-weight: bolder;
+    font-family: var(--textBlock-font);
+    font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     margin-inline: 12px;
-    margin-top: 20px;
+    margin-top: 25px;
     color: white;
     background-color: var(--nav-bgc);
     width: fit-content;
@@ -75,7 +101,7 @@ body{
 /* Main Heading <--- */
 .mainHeading{
     margin-top: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     font-family: var(--heading-font);
     font-weight: normal;
     font-size: 225px;
@@ -86,9 +112,9 @@ body{
 }
 
 .subtitle{
-    font-family: var(--page-font);
+    font-family: var(--textBlock-font);
     font-weight: 400;
-    font-size: 64px;
+    font-size: 52px;
     text-shadow: 0px 4px #1C588C;
     color: white;
     width: fit-content;
@@ -97,11 +123,60 @@ body{
 
 }
 
+
+.btt a{
+    text-decoration: none;
+    padding: 4px;
+    background: linear-gradient(blue, dodgerblue, aqua, white);
+    border: 1px solid #fff;
+    border-radius: 4px;
+    color: white;
+    font-family: "Orbitron";
+    font-size: 18px;
+    font-weight: bolder;
+    position: fixed;
+    width: 20px;
+    text-align: center;
+    top: -50px;
+    left: 1px;
+    animation: arrowShrink 1s ease forwards;
+    height: 64px;
+}
+
+.btt a:hover{
+    animation: arrowGrow 1s ease forwards;
+}
+
+@keyframes arrowGrow {
+
+    0%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(1.8rem);
+    }
+}
+
+@keyframes arrowShrink {
+
+    0%{
+        transform: translateY(1.8rem);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+#section3{
+    padding-bottom: 20px;
+}
+
 #downArrow a{
-    margin-top: 125px;
-    margin-bottom: 4cm;
+    margin-block: 70px;
     color: #fff;
-    font-size: 2px;
+    font-size: 1px;
     background: linear-gradient(dodgerblue, #6dffff, #fff);
     border-radius: 100px;
     text-align: center;
@@ -115,12 +190,6 @@ body{
          transform: translateY(1rem); 
         }
 }
-
-
-#section3{
-    padding-bottom: 20px;
-}
-
 
 .textBlockOne{
     font-family: var(--textBlock-font);
@@ -151,56 +220,13 @@ body{
     color: #6dffff;
 }
 
-.btt a{
-    text-decoration: none;
-    padding: 4px;
-    background: linear-gradient(blue, dodgerblue, aqua, white);
-    border: 1px solid #fff;
-    border-radius: 4px;
-    color: white;
-    font-family: var(--page-font);
-    font-size: 18px;
-    font-weight: bolder;
-    position: fixed;
-    top: -50px;
-    left: 5px;
-    animation: arrowShrink 1s ease forwards;
-    height: 60px;
-}
-
-.btt a:hover{
-    animation: arrowGrow 1s ease forwards;
-}
-
-@keyframes arrowGrow {
-
-    0%{
-        transform: translateY(0);
-    }
-
-    100%{
-        transform: translateY(1.8rem);
-    }
-}
-
-@keyframes arrowShrink {
-
-    0%{
-        transform: translateY(1.8rem);
-    }
-
-    100%{
-        transform: translateY(0);
-    }
-}
-
-
 footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
-    font-family: var(--page-font);
+    flex-direction: column;
+    gap: 0.5cm;
+    font-family: var(--textBlock-font);
     margin-top: auto;
     font-size: 24px;
     padding: 20px;

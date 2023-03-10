@@ -13,6 +13,10 @@
 
 /* ===FONTS=== */
 @font-face {
+    font-family: "monogram";
+    src: url(/assets/fonts/monogram.woff);
+}
+@font-face {
     font-family: "Press Start 2P";
     src: url(/assets/fonts/PressStart2P.woff);
 }
@@ -20,8 +24,16 @@
 @font-face {
     font-family: "Changa";
     src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
 }
 
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
 /* ===Start of CSS=== */
 .utility1{
     width: 99%;
@@ -57,8 +69,9 @@ body{
 }
 
 .mainNav a{
-    font-family: var(--page-font);
-    font-weight: bolder;
+    font-family: var(--textBlock-font);
+    font-size: 14px;
+    font-weight: bold;
     padding: 10px;
     margin-inline: 12px;
     margin-top: 25px;
@@ -144,8 +157,9 @@ footer{
     background-color: #000;
     color: white;
     display: flex;
-    flex-direction: row;
-    font-family: var(--page-font);
+    flex-direction: column;
+    gap: 0.5cm;
+    font-family: var(--textBlock-font);
     margin-top: auto;
     font-size: 24px;
     padding: 20px;
