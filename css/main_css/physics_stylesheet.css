@@ -1,16 +1,20 @@
 body{
-    background-color:dimgrey;
+    margin: 0;
+    padding: 0;
+    background-image: url(/assets/backgrounds/background.png);
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 h1{
-    outline: 4px black solid;
-    color: wheat;
     margin-inline: auto;
-    text-align: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: grey;
-    max-width: 800px;
+    border: 4px solid #fff;
+    max-width: 760px;
     padding: 20px;
+    background-color: navy; 
+    color: #eae3d2;
+    text-align: center;
+    font-size: 24px;
 }
 
 .imgContainer{
@@ -20,11 +24,19 @@ h1{
 
 img {
     width: 100%;
-    outline: 6px black solid;
+    outline: 4px #000 solid;
 }
 
 p{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-block: 0;
+}
+
+footer{
+    padding: 20px;
+    margin-block: 50px 0;
+    background-color: #000;
+    text-align: center;
+    border: 2px solid #fff;
     color: wheat;
     font-size: 22px;
 }
