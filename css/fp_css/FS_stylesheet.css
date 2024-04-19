@@ -143,6 +143,7 @@ header{
 }
 
 .mainHeading{
+    padding-inline: 120px;
     font-size: 88px;
     font-family: var(--page-font);
     margin-block: 20px 5px;

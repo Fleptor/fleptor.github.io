@@ -112,13 +112,13 @@ body{
 
 /* Page Content <--- */
 .aboutGrid{
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
 }
 
 .aboutMe{
-    margin-right: 100px;
     margin-bottom: 50px;
     border-radius: 12px;
     padding: 16px;
@@ -132,7 +132,6 @@ body{
 
 
 .contacts{
-    margin-inline: auto;
     border-radius: 12px;
     padding: 16px;
     font-family: var(--textBlock-font);

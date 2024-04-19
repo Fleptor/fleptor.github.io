@@ -99,7 +99,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Is it fixed now? */
 }
 
 .mainNav a{
@@ -145,13 +144,13 @@ body{
 
 /* Page Content <--- */
 .aboutGrid{
-    display: grid;
-    place-items: center;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
 }
 
 .aboutMe{
-    margin-left: 100px;
     border-radius: 12px;
     padding: 16px;
     font-family: var(--textBlock-font);
