@@ -94,9 +94,21 @@ body{
     min-height: 100vh;
 }
 
+.blockExample
+{
+	display: flex;
+	align: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: bold;
+	font-size: 1rem;
+}
+
 /* Navigation <--- */
 .mainNav{
-    display:flex;
+    display: flex;
+    position: absolute;
+    top:1;
     align-items: center;
     justify-content: center;
 }

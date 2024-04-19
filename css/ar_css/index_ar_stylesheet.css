@@ -217,7 +217,12 @@ body{
 
 .textBlock a{
     text-decoration: none;
-    color: #6dffff;
+    color: #eae3d2;
+}
+
+
+.textBlock a:hover{
+    text-decoration: underline;
 }
 
 footer{

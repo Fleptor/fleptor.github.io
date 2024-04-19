@@ -85,6 +85,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    height: 100vh;
 }
 
 
@@ -163,6 +164,38 @@ body{
     border-radius: 1px;
     margin-bottom: 40px;
 }
+
+main{
+    text-align: center;
+    padding: 20px;
+    height: 820px;
+    background-color: var(--textBlock-bgc) ;
+    margin-inline: auto;
+    width: 740px;
+    border: 4px solid #fff;
+}
+
+main ul{
+    display: flex;
+    list-style-type: none;
+    gap: 10px
+}
+
+main li{
+    border: 1px #fff;
+    border-right-style: solid;
+
+
+}
+
+main a{
+    color: beige;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Orbitron;
+}
+
 
 .textBlockContainer{
     display: grid;
