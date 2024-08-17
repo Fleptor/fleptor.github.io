@@ -84,7 +84,7 @@ body{
     opacity: 0;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    align-items: center;
     height: 100vh;
 }
 
@@ -104,7 +104,7 @@ body{
     margin-top: 25px;
     color: white;
     background-color: var(--nav-bgc);
-    width: fit-content;
+    width: 60px;
     text-align: center;
     text-decoration: none;
     border-radius: 2px;
@@ -117,10 +117,6 @@ body{
 .mainNav a.selected, nav a.selected:hover{
     background-color: var(--nav-selected-bgc);
     border: #fff solid 1px;
-}
-
-.wlcmInterface{
-   height: 100vh;
 }
 
  /* Main Heading <--- */
@@ -148,11 +144,6 @@ body{
     margin-block: 6px 30px;
 }
 
-.subtitles{
-    display:grid;
-    place-items: center;
-}
-
 .subtitle{
     font-family: var(--page-font);
     font-weight: 400;
@@ -165,163 +156,61 @@ body{
     margin-bottom: 40px;
 }
 
-main{
-    text-align: center;
-    padding: 20px;
-    height: 820px;
-    background-color: var(--textBlock-bgc) ;
-    margin-inline: auto;
-    width: 740px;
-    border: 4px solid #fff;
-}
-
-main ul{
+.box {
     display: flex;
-    list-style-type: none;
-    gap: 10px
-}
-
-main li{
-    border: 1px #fff;
-    border-right-style: solid;
-
-
-}
-
-main a{
-    color: beige;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    font-family: Orbitron;
-}
-
-
-.textBlockContainer{
-    display: grid;
-    place-items: center;
-}
-
-.textBlock{
-    margin-inline: auto;
-    width: auto;
-    color: #FFF;
-    font-family: var(--textBlock-font);
+    align-items: center;
+    text-align: center;
+    max-width: 960px;
+    background-color: var(--textBlock-bgc);
+    font-family: var(--page-font);
+    border: 2px solid #fff;
     padding: 20px;
-    font-size: 17px;
-    text-align: left;
     margin-block: 0 50px;
-    display: flex;
-    flex-direction: column;
+    gap: 2rem;
 }
 
-.textBlock ul{
+
+img {
+    max-height: 250px;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    box-shadow: #000000 0px 5px 15px;
+}
+
+img:hover {
+    box-shadow: #ffffff80 0px 5px 15px;
+}
+
+footer {
+    align-self: stretch;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    gap: 0.5cm;
-    max-width: 852px;
-    text-align: left;
-    list-style: none;
-    padding-inline-start: 0;
-}
-
-.textBlock li{
-    border: 4px solid #fff;
-    text-align: center;
-    height: 100px;
-    width: 140px;
-    padding: 8px;
-    display: grid;
-    place-items: center;
-    background-color: #001E6C;
-}
-
-.textBlock a{
-    color: #EAE3D2;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: var(--page-font);
-    text-decoration: none;
-}
-
-.textBlock a:hover{
-    text-decoration: underline;
-}
-
-.textBlock p{
-    margin: 0;
-    padding-bottom: 20px;
-    padding-left:20px;
-    padding-right: 20px;
-}
-
-footer{
+    justify-content: space-around;
     background-color: #000;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5cm;
+    color: #fff;
     font-family: var(--page-font);
-    margin-top: auto;
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
-.ftrCol1{
-    margin: auto;
-}
-
-.ftrCol2{
-    margin: auto;
+.ftrCol2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.ftrNavTop{
-    display: flex;
+.ftrCol2 > * {
+    width: 70px;
+    font-size: 40px;
+    color: #EAE3D2;
+    gap: 2.5rem;
 }
 
-
-.ftrNavTop a{
-    margin-inline: 8px;
-    border: 1px solid #fff;
-    width: 78px;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
+.ftrCol2 > *:hover {
+    color: #AAA;
 }
-
-.ftrNavTop a:hover{
-    background-color: #40c4ff;
-}
-
-.ftrNav{
-    color: mediumaquamarine;
-    margin-top: 16px;
-    text-align: left;
-}
-
-.ftrNav a{
-    padding-inline: 8px;
-    margin-inline: 4px;
-    color: #fff;
-    border: 1px solid white;
-    text-decoration: none;
-}
-
-.ftrNav a:hover{
-    background-color: #40c4ff;
-}
-
-
-
-
 
 @media (orientation: portrait){
     .mainHeading{
@@ -337,11 +226,6 @@ footer{
 
     .subtitle{
         font-size: 42px;
-    }
-
-    .textBlock{
-        margin: 0;
-        width: auto;
     }
 
     .ftrCol1{

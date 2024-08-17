@@ -47,7 +47,10 @@
 
 
 body{
-    background-color: #36393f;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #313338;
     margin: 0;
     padding: 0;
     transform: translateY(3rem);
@@ -63,18 +66,28 @@ h1{
     margin-bottom: 0;
 }
 
+h1 a {
+    color: #fff;
+}
+
+h1 a:hover {
+    color: #aaa;
+}
+
 .profile{
+    width: 100%;
     max-width: 600px;
     height: 480px;
     position: relative;
     margin-inline: auto;
+    margin-block: 0 120px;
     box-shadow: #00000059 0px 5px 15px;
 }
 
 .header{
     max-width:600px;
-    height: 120px;
-    background-color: #5dce2d;
+    height: 210px;
+    background-color: #c91d1d;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
 }
@@ -85,7 +98,7 @@ h1{
     border-radius: 50%;
     background-color: #18191c;
     position: absolute;
-    top: 50px;
+    top: 140px;
     left: 17px;
 }
 
@@ -95,7 +108,7 @@ h1{
     border-radius: 50%;
     position: absolute;
     left: 9px;
-    bottom: 10px;
+    bottom: 8px;
 }
 
 .status{
@@ -121,20 +134,30 @@ h1{
 .belowHeader{
     max-width:600px;
     height: 120px;
-    background-color: #18191c;
+    background-color: #111214;
     border-bottom: 1px solid #32353b;
 }
 
-.userName{
+.displayName{
     margin-top: 70px;
     margin-inline: 16px;
     position: absolute;
-    font-family: 'Uni Sans';
+    font-family: system-ui;
+    font-weight: bold;
     font-size: 20px;
     color: #fff;
 }
 
+.userName {
+    position: relative;
+    top: 19px;
+    right: 140px;
+    font-weight: normal;
+    font-size: 12px;
+}
+
 .tag{
+    display: none;
     color: #b9bbbe;
 }
 
@@ -142,15 +165,15 @@ h1{
     width: 16px;
     height: 16px;
     position:absolute;
-    top: 134px;
-    left: 155px;
+    top: 287px;
+    left: 160px;
 }
 
 
 .bottom{
     max-width: 600px;
     height: 240px;
-    background-color: #18191c;
+    background-color: #111214;
 }
 
 .aboutMe{
@@ -199,12 +222,8 @@ h2{
     margin-bottom: 8px;
 }
 
-.textBlock{
-    display: grid;
-    place-items: center;
-}
-
-.textBlock p{
+.textBlock {
+    text-align: center;
     padding: 20px;
     margin: 0;
     color: #b9bbbe;
@@ -212,26 +231,15 @@ h2{
     font-size: 24px;
 }
 
-.textBlockTwo{
-    width: fit-content;
-    margin: auto;
-}
-
-.textBlockTwo p{
-    text-align: center; 
-    margin-block: 0 16px;
-    color: #b9bbbe;
-    font-family: 'Orbitron';
-    font-size: 24px;
-}
-
 .inviteContainer{
+    width: 100%;
     max-width: 390px;
     height: 90px;
     background-color: #2f3136;
     padding: 16px;
     position: relative;
-    margin: auto;
+    margin-inline: auto;
+    margin-block: 0 50px;
     box-shadow: #00000059 0px 5px 15px;
 }
 
@@ -318,64 +326,33 @@ h2{
 }
 
 
-footer{
-    background-color: #000;
-    color: white;
+footer {
     display: flex;
-    flex-direction: column;
-    gap: 0,5cm;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    color: #fff;
     font-family: var(--page-font);
-    margin-top: auto;
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
-.ftrCol1{
-    margin: auto;
-}
-
-.ftrCol2{
-    margin: auto;
+.ftrCol2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.ftrNavTop{
-    display: flex;
+.ftrCol2 > * {
+    width: 70px;
+    font-size: 40px;
+    color: #EAE3D2;
+    gap: 2.5rem;
 }
 
-
-.ftrNavTop a{
-    margin-inline: 8px;
-    border: 1px solid #fff;
-    width: 78px;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-}
-
-.ftrNavTop a:hover{
-    background-color: #40c4ff;
-}
-
-.ftrNav{
-    color: mediumaquamarine;
-    margin-top: 25px;
-    text-align: left;
-}
-
-.ftrNav a{
-    padding-inline: 16px;
-    color: #fff;
-    border: 1px solid white;
-    text-decoration: none;
-}
-
-.ftrNav a:hover{
-    background-color: #40c4ff;
+.ftrCol2 > *:hover {
+    color: #AAA;
 }
 
 @keyframes fadeIn {
@@ -385,11 +362,19 @@ footer{
     }
 }
 @media (max-width: 400px){
-    .inviteContainer img{
-        display: none;
+    .inviteContainer {
+        width: fit-content;
 }
-    .inviteMsg{
+    .inviteMsg {
 	margin: auto;
+    }
+    
+    .joinButton {
+        margin-top: 5px;
+        top: 100%;
+        left: 35%;
+        right: 0;
+        bottom: 0; 
     }
 }
 

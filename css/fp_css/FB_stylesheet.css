@@ -143,10 +143,9 @@ header{
 }
 
 .mainHeading{
-    font-size: 48px;
+    font-size: 58px;
     max-width: 740px;
     font-family: var(--page-font);
-    margin-block: 20px 20px;
     color: #FCD900;
     text-align: center;
     text-shadow: 4px 3px #FCD90080;
@@ -154,7 +153,6 @@ header{
 
 .s1{
     display: flex;
-    flex-direction: column;
     margin-block: 50px 0;
     margin-inline: auto;
     max-width: 740px;
@@ -165,6 +163,13 @@ header{
     background-color: #1C588C80;
     border: 4px solid #fff;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.s1 img {
+    max-height: 250px;
+    max-width: 250px;
+    height: 100%;
+    width: 100%;
 }
 
 .s1 p{
@@ -228,68 +233,41 @@ header{
     text-decoration: underline;
 }
 
-footer{
-    background-color: #000;
-    color: white;
+footer {
     display: flex;
-    flex-direction: column;
-    gap: 0.5cm;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    color: #fff;
     font-family: var(--page-font);
-    margin-top: auto;
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
-.ftrCol1{
-    margin: auto;
-}
-
-.ftrCol2{
-    margin: auto;
+.ftrCol2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.ftrNavTop{
-    display: flex;
+.ftrCol2 > * {
+    width: 70px;
+    font-size: 40px;
+    color: #EAE3D2;
+    gap: 2.5rem;
 }
 
-
-.ftrNavTop a{
-    margin-inline: 8px;
-    border: 1px solid #fff;
-    width: 78px;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-}
-
-.ftrNavTop a:hover{
-    background-color: #40c4ff;
-}
-
-.ftrNav{
-    color: mediumaquamarine;
-    margin-top: 16px;
-    text-align: left;
-}
-
-.ftrNav a{
-    padding-inline: 8px;
-    margin-inline: 4px;
-    color: #fff;
-    border: 1px solid white;
-    text-decoration: none;
-}
-
-.ftrNav a:hover{
-    background-color: #40c4ff;
+.ftrCol2 > *:hover {
+    color: #AAA;
 }
 
 @media (orientation: portrait){
+
+    .s1 {
+        gap: 1rem;
+    }
+
     header{
         gap: 1cm;
     }
@@ -298,10 +276,6 @@ footer{
     }
     .fpHeading2{
         font-size: 28px;
-    }
-
-    .s1 img{
-      display: none;
     }
 
     .mainHeading{

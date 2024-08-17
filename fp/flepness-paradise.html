@@ -8,12 +8,12 @@
     <link rel="shortcut icon" type="image/png" href="/assets/files/flepsiteTitleLogo.png">
     <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/fp_css/FP_stylsheet.css">
-    <title>FB - fp</title>
+    <title>Flepness Paradise - fp</title>
 </head>
 <body>
     <header id="s0">
         <div class="btnContainer">
-            <div class="goBackBtn"><a href="/fp.html"><button><i class="fa-solid fa-arrow-left"></i></button></a></div>
+            <div class="goBackBtn"><a href="/fp/"><button><i class="fa-solid fa-arrow-left"></i></button></a></div>
         </div>
         <div class="heading">
          <h1 class="fpHeading1">FLEPESS</h1>
@@ -21,7 +21,7 @@
         </div>
     </header>
         <section class="s1">
-            <img src="/assets/files/Picsart_22-04-15_19-40-57-602EDITED.jpg" alt="Flepness Paradise Clasic Logo">
+            <img src="/assets/files/flepness-paradise-logo.jpg" alt="Flepness Paradise Clasic Logo">
             <h2 class="mainHeading">Flepness Paradise</h2>
             <p>Flepness Paradise or FP is a Discord server founded and maintained by Fleptor, <br>it's the most where you'll see Fleptor active, we'll dive deep into its history, previous iteration, and updates.</p>
             <a style="text-align: center" href="https://discord.com/invite/TKemb7nG4P"><i class="fa-brands fa-discord"></i> - Invite Link</a>
@@ -175,26 +175,30 @@
     </ul>
 </section>
 
-<div class="bTTBtnContainer">
-    <a href="#s0"><button><i class="fa-solid fa-arrow-up"></i></button></a>
-</div>
+<div id="backToTop">↑</div>
 
 <footer>
+    <div class="ftrCol1">
+    Belal J. Hamdan - 2024.
+    </div>
     <div class="ftrCol2">
-        <nav class="ftrNavTop">
-        <a href="/index.html">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/blog.html">Blog</a>
-        <a href="/fp.html">fp</a>
-        </nav>
-        <nav class="ftrNav">
-            <a href="/credits.html">Credits</a>
-            <a style="font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;" href="/ar_pages/index_ar.html">عربي</a>
-        </nav>
-</div>
-<div class="ftrCol1">
-    <i class="fa-solid fa-angle-right"></i> Belal Jamal Hamdan - 2023
-</div>
+    <a href="#"><i class="fa-solid fa-language"></i></a>
+    <a href="/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
+    </div>
 </footer>
+<!-- <script>
+const backToTopButton = document.getElementById("backToTop");
+window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+};
+backToTopButton.onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+</script>
+-->
 </body>
 </html>

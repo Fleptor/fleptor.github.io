@@ -141,7 +141,7 @@ footer{
     flex-direction: row;
     font-family: var(--textBlock-font);
     font-size: 24px;
-    padding: 30px;
+    padding: 20px;
     margin-top: auto;
 }
 

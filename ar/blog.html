@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/flepsiteTitleLogo.png">
-    <link rel="stylesheet" href="/css/ar_css/blog_ar_stylesheet.css">
+    <link rel="stylesheet" href="/css/main_css/blog_stylesheet.css">
     <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
     <title>المدونة - فلِبسايت</title>
 </head>
@@ -20,7 +20,7 @@
         <h1 class="mainHeading">BLOG</h1>
     </div>
 
-<div class="mobileNavBar">
+<div class="mobileSidebar">
       <a href="#s1" class="mobileUI"><i class="fa-regular fa-file-lines"></i></a>
       <a href="#s2" class="mobileUI"><i class="fa-regular fa-square-check"></i></a>
       <a href="#s3" class="mobileUI"><i class="fa-sharp fa-regular fa-file-zipper"></i></a>
@@ -38,9 +38,9 @@
 	<ol class="postsList">
 		<h2>المنشورات:</h2>
 		<hr>
-		<li><span class="listBullet">1) </span><a href="/blog/p1.html">أعمال فوق أعمال</a></li>
+		<li><span class="listBullet">1) </span><a href="/blog/work-on-work.html">أعمال فوق أعمال</a></li>
 		<p>سبب العمل على فلِبنس بارادايس وتصميم فلِبسايت في هذا الوقت، ومستقبل فلِبنس برودكاست.</p>
-		<span class="postInfo">نُشِرَتْ: 29-08-2022 - شخصي</span>
+		<span class="postInfo">نُشِرَ: 29-08-2022 - شخصي</span>
 		<!--	<hr class="postsSeperation"> -->
 	</ol>
 
@@ -57,13 +57,12 @@
                 <p>قائمة أهدافي الحالية:</p>
                 <hr>
                 <ul>
-                    <li> - تحسين خط اليد. </li>
-                        <li> - التخرج من المدرسة الثانوية (التوجيهي). </li>
-                        <li> - الإلتحاق بإحدى الجامعات بتخصص أقرره بنفسي. </li>
+                        <li> - التخرج من الجامعة.</li>
+                        <li> - إكمال الدورات المتعلقة بهندسة أمن الشبكات.</li>
                         <li> - إكمال فلِبنس برودكاست.</li>
                         <li> - تعلم أساسيات JS. </li>
-                        <li> - تعلم لغة برمجة من اختياري. </li>
                         <li> - التغلب على المشكلات الشخصية المذكورة في جميع أنحاء الموقع. 
+                        <li> - شوفيلي يما بنت حلال، ترحمني من العزوبية. <span style="color:lightgray; font-size: 12px;">شكرًا لـ: فوزي بن قمرة.</span></li>
                 </ul>
                 <p>هذه الأهداف ليست موضوعة بالترتيب، وسيتم تنفيذها ولكن بدون أية موعد نهائي محدد (مع بعض الإستثناءات)، وقد يتم تعديل القائمة لاحقًا.</p>
               
@@ -72,7 +71,7 @@
         <div id="s3">
             <div class="archBlock">
                 <h2>الأرشيف:</h2>
-            <p>المحتوى المؤرشف هو منشورات مدونة قديمة على دسكورد تم لصقه من دسكورد مباشرةً كما هو بدون تحرير (بإستثناء أول موضوعين)، وبعض الموضوعات التي تمت مناقشتها كانت من وجهة نظر نفسي السابقة ولم تعد تنطبق في الأوقات الحالية.</p>
+            <p>المحتوى المؤرشف هو منشورات المدونة القديمة على دسكورد، تم لصقها من دسكورد مباشرةً كما هي بدون تحرير (باستثناء أول موضوعين)، وبعض الموضوعات التي تمت مناقشتها كانت من وجهة نظر نفسي السابقة ولم تعد تنطبق في الأوقات الحالية.</p>
                 <hr>
                 <ul>
                     <li>
@@ -104,24 +103,34 @@
     </div>
     </div>
 
-        <footer>
-            <div class="ftrCol2">
-                <nav class="ftrNavTop">
-                    <a href="/ar/index.html">الرئيسية</a>
-                    <a href="/ar/about.html">حولي</a>
-                    <a href="/ar/blog.html">المدونة</a>
-                    <a href="/ar/fp.html">⠀fp⠀</a>
-                </nav>
-                <nav class="ftrNav">
-                    <a href="/credits.html">الإعتمادات</a>
-                    <a href="/blog.html">English</a>
-                </nav>
-        </div>
-    
-    
-        <div class="ftrCol1">
- بلال جمال حمدان - 2023
-        </div>
-    </footer>
+<footer>
+    <div class="ftrCol1">
+        بلال جمال حمدان - 2024.
+    </div>
+    <div class="ftrCol2">
+    <a href="/blog/"><i class="fa-solid fa-language"></i></a>
+    <a href="/ar/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
+    </div>
+</footer>
+
+<style>
+* {
+    text-align: right;
+}
+
+.mainNav a, h2, footer {
+    font-family: "Changa";
+}
+
+.blogContentNav a, .blogContentNav button, .mobileSidebar button{
+    text-align: center;
+}
+
+h2 {
+    font-weight: normal;
+}
+
+</style>
+
 </body>
 </html>

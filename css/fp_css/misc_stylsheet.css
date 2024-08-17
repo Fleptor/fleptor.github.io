@@ -216,65 +216,33 @@ a:hover{
     text-decoration: underline;
    } 
 
-footer{
-    background-color: #000;
-    color: white;
+footer {
     display: flex;
-    flex-direction: column;
-    gap: 0.5cm;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #000;
+    color: #fff;
     font-family: var(--page-font);
-    margin-top: auto;
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
     padding: 20px;
+    margin-top: auto;
 }
 
-.ftrCol1{
-    margin: auto;
-}
-
-.ftrCol2{
-    margin: auto;
+.ftrCol2 {
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
-.ftrNavTop{
-    display: flex;
+.ftrCol2 > * {
+    width: 70px;
+    font-size: 40px;
+    color: #EAE3D2;
+    gap: 2.5rem;
 }
 
-
-.ftrNavTop a{
-    margin-inline: 8px;
-    border: 1px solid #fff;
-    width: 78px;
-    padding: 8px;
-    text-decoration: none;
-    color: #fff;
-    text-align: center;
-}
-
-.ftrNavTop a:hover{
-    background-color: #40c4ff;
-}
-
-.ftrNav{
-    color: mediumaquamarine;
-    margin-top: 16px;
-    text-align: left;
-}
-
-.ftrNav a{
-    padding-inline: 8px;
-    margin-inline: 4px;
-    color: #fff;
-    border: 1px solid white;
-    text-decoration: none;
-}
-
-.ftrNav a:hover{
-    background-color: #40c4ff;
+.ftrCol2 > *:hover {
+    color: #AAA;
 }
 
 @media (orientation: portrait){
