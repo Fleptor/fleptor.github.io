@@ -225,6 +225,9 @@ footer {
 
 
 @media (orientation: portrait) {
+    .mainNav a {
+	    width: 50px;
+    } 
 
     .mainHeading{
         font-size: 64px;

@@ -264,10 +264,18 @@ footer {
 }
 
 @media (orientation: portrait){
-
+     
     .s1 {
         gap: 1rem;
     }
+    .s1 img {
+	display: none;
+}
+
+    iframe {
+	width: 320px;
+	height: 200px;
+       }
 
     header{
         gap: 1cm;

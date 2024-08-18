@@ -148,9 +148,13 @@ footer {
 }
 
 @media (orientation: portrait){
-    header{
-        gap: 0.5cm;
+    header {
+       font-size: 45px;
     }
+    
+    header a {
+       font-size: 32px;
+       }
 
     .creditsHeading{
         font-size: 36px;
