@@ -63,33 +63,20 @@ body{
     animation: FadeIn 900ms ease forwards;
 }
 
-header{
+header {
     display: flex;
-    flex-direction: row;
-    width: 80%;
-    margin-inline: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     color: #fff;
-    margin-block:  20px 50px;
-}
-
-.creditsHeading{
-    font-size: 60px;
-    font-family: var(--heading-font);
+    font-size: 90px;
+    font-family: var(--page-font);
+    font-weight: bold;
     text-shadow: 0px 6px var(--heading-shadow);
-    margin-inline: auto;
 }
 
-.goBackBtn{
-    margin: auto;
-}
-
-.goBackBtn button{
-    width: 50px;
-    height: 50px;
-    color: #fff;
-    font-size: 25px;
-    border-radius: 50%;
-    background-color: #1C588C;
+header a {
+	font-size: 50px;
 }
 
 h2 {

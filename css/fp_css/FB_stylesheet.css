@@ -170,6 +170,7 @@ header{
     max-width: 250px;
     height: 100%;
     width: 100%;
+    box-shadow: #000000 0px 5px 15px;
 }
 
 .s1 p{
