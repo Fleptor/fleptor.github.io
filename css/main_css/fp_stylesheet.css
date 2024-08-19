@@ -184,9 +184,9 @@ img:hover {
 }
 
 footer {
-    align-self: stretch;
     display: flex;
     align-items: center;
+    align-self: stretch;
     justify-content: space-around;
     background-color: #000;
     color: #fff;
@@ -216,12 +216,10 @@ footer {
 @media (orientation: portrait){
     .mainNav a {
 	width: 50px;
+	margin-inline: 10px;
 }
     .box {
 	flex-direction: column;
-}
-    .box img {
-        margin-block: 5px;
 }
 
     .mainHeading{

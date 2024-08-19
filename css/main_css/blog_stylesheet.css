@@ -95,7 +95,7 @@ body{
 }
 
 .mainNav a{
-    font-family: 'Orbitron', sans-serif;
+    font-family: var(--page-font);
     font-weight: bolder;
     padding: 10px;
     margin-inline: 12px;
