@@ -152,7 +152,7 @@ header{
     text-shadow: 4px 3px #fcd90080;
 }
 
-.s1{
+section {
     display: flex;
     flex-direction: column;
     margin-block: 50px 0;
@@ -167,22 +167,8 @@ header{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.s1 p{
+section p{
     margin-block: 20px 0;
-}
-
-.s2{
-    margin-block: 50px;
-    margin-inline: auto;
-    max-width: 740px;
-    font-family: var(--textBlock-font);
-    font-size: 20px;
-    padding: 20px;
-    color: #fff;
-    background-color: #1C588C80;
-    border: 4px solid #fff;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
 }
 
 hr{
@@ -192,7 +178,7 @@ hr{
     border-bottom: 1px solid #fff;
 }
 
-.contentsHeading{
+h2 {
     margin: 0;
     text-align: left;
     font-family: var(--page-font);
@@ -200,7 +186,7 @@ hr{
     color: #FCD900;
 }
 
-.s1 ul{
+section ul{
     margin: 0;
     text-align: left;
     list-style: none;

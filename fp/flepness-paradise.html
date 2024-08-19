@@ -173,9 +173,23 @@
 
     </ul>
 </section>
-
-<div id="backToTop">↑</div>
-
+<button id="backToTopBtn"><i class="fa-solid fa-arrow-up"></i></button>
+<script>
+let backToTopBtn = document.getElementById("backToTopBtn");
+window.onscroll = function() {
+    scrollFunction();
+};
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        backToTopBtn.style.display = "block";
+    } else {
+        backToTopBtn.style.display = "none";
+    }
+}
+backToTopBtn.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+</script>
 <footer>
     <div class="ftrCol1">
     Belal J. Hamdan - 2024.
@@ -185,19 +199,5 @@
     <a href="/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
     </div>
 </footer>
-<!-- <script>
-const backToTopButton = document.getElementById("backToTop");
-window.onscroll = function() {
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        backToTopButton.classList.add("show");
-    } else {
-        backToTopButton.classList.remove("show");
-    }
-};
-backToTopButton.onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-</script>
--->
 </body>
 </html>

@@ -45,6 +45,26 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Regular.woff);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Bold.woff);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Changa";
+    src: url(/assets/fonts/Changa-Light.woff);
+    font-weight: 300;
+    font-style: normal;
+}
 
 body{
     display: flex;
