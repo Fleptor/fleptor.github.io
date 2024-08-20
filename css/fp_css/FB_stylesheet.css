@@ -170,6 +170,8 @@ header{
     max-width: 250px;
     height: 100%;
     width: 100%;
+    border: 1px solid #fcd900;
+    border-radius: 4px;
     box-shadow: #000000 0px 5px 15px;
 }
 

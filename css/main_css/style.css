@@ -122,7 +122,7 @@ h1::after {
 
 h1::before {
     background: #000;
-    animation: typewriter 2.4s steps(8) forwards; 
+    animation: typewriter 2s steps(8) forwards; 
 }
 @keyframes typewriter {
     to { left: 100%;}
