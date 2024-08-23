@@ -128,7 +128,7 @@ body{
 .mainHeading{
     margin-top: 75px;
     margin-bottom: 0;
-    font-size: 86px;
+    font-size: clamp(38px, 7.5vw + 1rem, 86px);
     font-family: var(--heading-font);
     font-weight: bold;
     color: white;
@@ -137,7 +137,7 @@ body{
 }
 
 .secondHeading{
-    font-size: 86px;
+    font-size: clamp(38px, 7.5vw + 1rem, 86px); 
     color: white;
     font-family: var(--heading-font);
     text-shadow: 0px 12px /*#ed8200*/#E8630A;
@@ -217,12 +217,10 @@ footer {
 	margin-inline: 10px;
 }
     .mainHeading{
-        font-size: 45px;
         text-shadow: 0px 6px var(--heading-shadow);
     }
 
     .secondHeading{
-        font-size: 45px;
         text-shadow: 0px 6px #ed8200;
         margin-block: 1px 30px;
     }

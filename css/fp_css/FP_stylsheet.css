@@ -128,28 +128,6 @@ header{
     text-align: center;
 }
 
-.s1 img{
-    width: 128px;
-    height: 128px;
-    position: absolute;
-    border: 1px solid #FCD900;
-    border-radius: 4px;
-    top: 16px;
-    left: 16px;
-}
-
-.mainHeading{
-    font-size: 54px;
-    max-width: 740px;
-    font-family: var(--page-font);
-    margin-block: 20px 20px;
-    color: #FCD900;
-    text-align: center;
-    text-shadow: 4px 3px #FCD90080;
-    padding-left: 110px;
-    z-index: 999;
-}
-
 .s1{
     display: flex;
     flex-direction: column;
@@ -166,6 +144,12 @@ header{
     position: relative;
 }
 
+.s1 img {
+    width: 100%;
+    outline: 2px solid #fcd900;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
 .s1 p{
     margin-block: 20px 0;
 }
@@ -182,6 +166,7 @@ hr{
     margin-block: 0;
     color: #FCD900;
     font-family: var(--page-font);
+    text-shadow: 4px 3px #FCD90080;
 }
 
 .s1 ul{
@@ -287,8 +272,14 @@ a:hover {
 
 .updates-list {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	gap: 0.5rem;
+}
+
+.updates-list a {
+	text-align: center;
+	width: 100px;
+	border: 1px solid #fff;
 }
 
 #backToTopBtn {
@@ -345,10 +336,6 @@ footer {
     }
     .fpHeading2{
         font-size: 28px;
-    }
-
-    .s1 img{
-      display: none;
     }
 
     .mainHeading{

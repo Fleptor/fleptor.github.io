@@ -142,17 +142,9 @@ header{
     text-align: center;
 }
 
-.mainHeading{
-    font-size: 58px;
-    max-width: 740px;
-    font-family: var(--page-font);
-    color: #FCD900;
-    text-align: center;
-    text-shadow: 4px 3px #FCD90080;
-}
-
 .s1{
     display: flex;
+    flex-direction: column;
     margin-block: 50px 0;
     margin-inline: auto;
     max-width: 740px;
@@ -166,27 +158,21 @@ header{
 }
 
 .s1 img {
-    max-height: 250px;
-    max-width: 250px;
-    height: 100%;
     width: 100%;
     border: 1px solid #fcd900;
     border-radius: 4px;
     box-shadow: #000000 0px 5px 15px;
 }
 
-.s1 p{
-    margin-block: 0;
-}
-
-.s1 a{
+a {
     text-align: center;
     color: #EAE3D2;
     text-decoration: none;
 }
 
-.s1 a:hover{
+a:hover {
     text-decoration: underline;
+    color: #aaa;
 }
 
 .secondHeading{
@@ -227,15 +213,6 @@ header{
     position: relative;
 }
 
-.s2 a{
-    color: #EAE3D2;
-    text-decoration: none;
-}
-
-.s2 a:hover{
-    text-decoration: underline;
-}
-
 footer {
     display: flex;
     align-items: center;
@@ -267,13 +244,6 @@ footer {
 
 @media (orientation: portrait){
      
-    .s1 {
-        gap: 1rem;
-    }
-    .s1 img {
-	display: none;
-}
-
     iframe {
 	width: 320px;
 	height: 200px;
@@ -287,11 +257,6 @@ footer {
     }
     .fpHeading2{
         font-size: 28px;
-    }
-
-    .mainHeading{
-        padding-inline: 0;
-        font-size: 44px;
     }
 
     .ftrCol1{

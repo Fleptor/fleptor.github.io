@@ -170,6 +170,7 @@ section {
 section img {
     box-shadow: #000000 0px 5px 15px;
     margin-block: 20px;
+    width: 100%;
 }
 
 section p{
