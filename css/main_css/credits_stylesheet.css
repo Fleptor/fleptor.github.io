@@ -81,7 +81,7 @@ header a {
 
 h2 {
     text-align: center;
-    color: #fff;
+    color: #fcd900;
     font-family: var(--page-font);
 }
 
@@ -93,7 +93,7 @@ h2 {
     font-family:  Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 32px;
     padding: 20px;
-    max-width: 498px;
+    max-width: 420px;
     color: #fff;
 }
 

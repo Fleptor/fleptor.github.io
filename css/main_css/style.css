@@ -10,7 +10,7 @@
     --heading-shadow: #15446e;
     --textBlock-bgc: #1C588C8C;
     --footer-bgc:#0e2c46;
-    --heading-fontSize: 250px;
+    --heading-fontSize: 200px;
 }
 
 a {
@@ -150,6 +150,7 @@ h1::before {
     text-align: center;
     border-radius: 1px;
     opacity: 0;
+    margin-block: 0;
     transform: translateY(3rem);
     animation: fadeInUp 2s ease 2.4s forwards;
 }
