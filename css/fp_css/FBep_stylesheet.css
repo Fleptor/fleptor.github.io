@@ -59,7 +59,7 @@ html { height: 100%; }
 body{
     margin: 0;
     padding: 0;
-    background-image: url(/assets/backgrounds/background.png);
+    background-image: url(/assets/backgrounds/pixel-space.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
