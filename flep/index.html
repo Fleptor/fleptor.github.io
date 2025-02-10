@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firebase Data Entry</title>
+    <script type="module">
+        // Import Firebase SDK
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js";
+
+        // Your Firebase configuration
+        const firebaseConfig = {
+  apiKey: "AIzaSyAdxi3GRmNxVa-ro4x5_Tl6DDgWoDCwRn4",
+  authDomain: "fleptortest.firebaseapp.com",
+  projectId: "fleptortest",
+  storageBucket: "fleptortest.firebasestorage.app",
+  messagingSenderId: "666464512954",
+  appId: "1:666464512954:web:ca3545dc458992fa080b83"
+};
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+        
+        // Function to handle form submission
+        window.submitData = async () => {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            
+            if (name && email) {
+                try {
+                    await addDoc(collection(db, "users"), { name, email });
+                    alert("Data saved successfully!");
+                } catch (error) {
+                    console.error("Error adding document: ", error);
+                }
+            } else {
+                alert("Please fill out all fields.");
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2>Enter Your Data</h2>
+    <input type="text" id="name" placeholder="Enter your name" required>
+    <input type="email" id="email" placeholder="Enter your email" required>
+    <button onclick="submitData()">Submit</button>
+
+</body>
+</html>
+
