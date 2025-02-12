@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olives</title>
+    <link rel="shortcut icon" type="image/png" href="/assets/images/title-image.png">
+    <style>
+        @font-face {
+            font-family: "Oswald";
+            src: url(assets/fonts/Oswald-VariableFont_wght.woff);
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+    background-size: cover;
+    background-repeat: repeat; 
+    background-attachment: fixed;
+}
+
+
+
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.cart-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.cart-dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 2rem;
+    background-color: white;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Display cart dropdown when hovering over cart icon */
+.cart-container:hover .cart-dropdown {
+    display: block;
+}
+
+
+
+        .header {
+            background: transparent;
+            color: white;
+            padding: 8rem 2rem 2rem;
+            text-align: center;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .product-section {
+            background-color: transparent;
+            padding: 4rem 2rem;
+        }
+
+        .product-grid {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-wrap: nowrap;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 1rem;
+            width: 200px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: scale(1.1);
+        }
+
+        .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
+        .product-price {
+            font-size: 1rem;
+            color: #6B8E23;
+            margin: 0.5rem 0;
+        }
+
+        .add-to-cart,
+.Buy-now {
+    background-color: #6B8E23;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.add-to-cart:hover,
+.Buy-now:hover {
+    background-color: yellowgreen;
+}
+
+
+        .contact-section {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    justify-content: center;
+            padding: 4rem 2rem;
+            max-width: 580px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+	.contact-section h2 { text-align: center;  }
+
+        .contact-info {
+            flex: 1;
+        }
+
+        .contact-form {
+            flex: 1;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-form button {
+            background-color: #000;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            cursor: pointer;
+        }
+
+        .footer {
+            background-color: transparent;
+            color: white;
+            padding: 2rem;
+        }
+
+        .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* Center all items in the footer */
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
+    text-align: center; /* Center text for the logo and links */
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1rem; /* Space between items */
+    align-items: center;
+    justify-content: center; /* Center items within footer nav */
+    margin-top: 1rem; /* Add some space above */
+}
+
+
+        .footer-logo {
+            font-size: 1.2rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        @media (max-width: 900px) {
+            .product-grid {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .product-card {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .contact-section {
+                flex-direction: column;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+
+            .footer-nav {
+                justify-content: center;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+        }
+        @keyframes cart-grow {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.cart-icon.animate {
+    animation: cart-grow 0.3s ease-in-out;
+}
+.coming-soon{
+    font-family: Oswald;
+    text-align: center;
+    font-size: 9em;
+    font-weight: bold;
+    
+}
+
+@media(orientation: portrait) {
+
+    .coming-soon {
+        font-size: 5rem;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="cart-container">
+            <a href="cart.html">
+                <img src="assets/images/shopping-bag.svg"  alt="Cart" class="cart-icon" />
+            </a>
+            <div id="cart-dropdown" class="cart-dropdown">
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="logo-container">
+            <img src="assets/images/BlackOnWhite-transparent.png" height="80px" alt="Olives Logo" class="logo-image">
+        </div>
+    </nav>
+    
+    
+    <header class="header">
+        <div class="logo-container">
+            <div class="logo">Olives</div>
+        </div>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/droidarabickufi.css">
+
+
+        <p style="color: black; font-size: 1.4rem; font-family: 'Droid Arabic Kufi', sans-serif;">
+            الأناقة ليست في المظهر وحده، بل في روح ترفض الانكسار وتلهم الآخرين.
+        </p>
+        <p style="color: black; font-size: 1.4rem; font-family: 'Droid Arabic Kufi', sans-serif;">
+            "متجذرون في روح المقاومة، ونعبر عن أنفسنا بأناقة متفردة"
+        </p>
+        
+        <br>
+    </header>
+    <div class="coming-soon" dir="ltr">
+        Coming soon...
+    </div>
+
+   <section class="product-section">
+        <div class="product-grid" dir="ltr">
+            
+            <div class="product-card">
+                <img src="Images/polo1.jpg" alt="Product 1" width="70" height="70" class="product-image" />
+                <h3 class="product-title">Product 1</h3>
+                <p class="product-price">$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="Buy-now">Buy Now</button>
+            </div>
+            
+    
+            <div class="product-card">
+                <img src="Images/polo1.jpg" alt="Product 2" width="70" height="70" class="product-image" />
+                <h3 class="product-title">Product 2</h3>
+                <p class="product-price">$24.99</p>
+                <button class="add-to-cart">Add to Cart</button>
+                <button class="Buy-now">Buy Now</button>
+            </div>
+            
+    
+            <!-- #Add more product cards as needed  -->
+        </div>
+    </section> 
+
+    <section dir="ltr" class="contact-section">
+        <div class="contact-info">
+            <h2>Connect With Our Fashion Team</h2>
+            <p>Contact Olives to discover our exclusive details about our fashion apparel collection.</p>
+        </div>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Name" required />
+                <input type="email" placeholder="Email" required />
+                <textarea placeholder="Message" rows="3" required style="resize: none; height: 180px;"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">Olives</div>
+            <div class="footer-nav">
+                <a href="about.html"> <!-- Replace "about.html" with your actual About page link -->
+                    <img src="assets/images/info.png" width="35" height="35" alt="About" /> <!-- Ensure you have an icon image -->
+                </a>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/olivesstyle" target="_blank">
+                        <img src="assets/images/instagram-logo.png" width="30" height="30" alt="Instagram" />
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61565619145409" target="_blank">
+                        <img src="assets/images/facebook-logo.png" width="40" height="35" alt="Facebook" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        const cartButton = document.querySelector('.cart-button');
+        const cartDropdown = document.getElementById('cart-dropdown');
+        const buyNowButtons = document.querySelectorAll('.Buy-now');
+        const addToCartButtons = document.querySelectorAll('.add-to-cart');
+        const cartIcon = document.querySelector('.cart-icon');
+
+addToCartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productCard = button.closest('.product-card');
+        const productName = productCard.querySelector('.product-title').innerText;
+        const productPrice = productCard.querySelector('.product-price').innerText;
+
+        // Add product to cartItems array and save to localStorage
+        cartItems.push({ name: productName, price: productPrice });
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        updateCartDropdown();
+
+        // Add the animation class to the cart icon
+        cartIcon.classList.add('animate');
+
+        // Remove the animation class after the animation ends
+        setTimeout(() => {
+            cartIcon.classList.remove('animate');
+        }, 300); // Match the duration of the animation in milliseconds
+    });
+});
+
+    
+        // Retrieve cart items from localStorage or initialize an empty array
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    
+        // Function to update the cart dropdown
+        // Ensure cart updates when the page loads
+function updateCartDropdown() {
+    const cartDropdown = document.getElementById('cart-dropdown');
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+    if (cartItems.length === 0) {
+        cartDropdown.innerHTML = '<p>Your cart is empty</p>';
+    } else {
+        cartDropdown.innerHTML = '<h4>Your Cart:</h4>';
+        cartItems.forEach(item => {
+            cartDropdown.innerHTML += `<p>${item.name} - ${item.price}</p>`;
+        });
+    }
+}
+
+// Ensure cart updates immediately after page load
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartDropdown();
+});
+
+    
+        // Handle "Add to Cart" button click
+        
+    
+        // Handle "Buy Now" button click
+        buyNowButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productCard = button.closest('.product-card');
+                const productName = productCard.querySelector('.product-title').innerText;
+                const productPrice = productCard.querySelector('.product-price').innerText;
+    
+                // Add product to cartItems array and navigate to cart
+                cartItems.push({ name: productName, price: productPrice });
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                window.location.href = 'cart.html';
+            });
+        });
+    
+        // Handle cart icon click (redirect to cart page)
+        cartButton.addEventListener('click', () => {
+            window.location.href = 'cart.html';
+        });
+    
+        // Update cart dropdown when the user hovers over the cart icon
+        const cartContainer = document.querySelector('.cart-container');
+        cartContainer.addEventListener('mouseenter', updateCartDropdown);
+    
+        // Initial update of the cart dropdown when the page loads
+        updateCartDropdown();
+    </script>
+    
+
+
+</body>
+</html>
