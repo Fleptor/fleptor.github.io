@@ -5,36 +5,70 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
     <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
-    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
     <style>
-        body { background-color: #f5f5f5; font-family: Arial, sans-serif; text-align: center; }
-        #checkout-container { background-color: white; padding: 2rem; border-radius: 8px; width: 50%; margin: 5rem auto; text-align: left; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .input-field { width: 100%; padding: 0.5rem; margin-top: 0.5rem; border: 1px solid #ddd; border-radius: 4px; }
-        #checkout-button { background-color: #6B8E23; color: white; padding: 1rem 2rem; border-radius: 4px; cursor: pointer; width: 100%; margin-top: 1rem; }
-        #checkout-button:hover { background-color: #8FA163; }
+        body { 
+            background-color: #f5f5f5; 
+            font-family: Arial, sans-serif; 
+            text-align: center;
+        }
+        #checkout-container { 
+            background-color: white; 
+            padding: 2rem; 
+            border-radius: 8px;
+            width: 30%; 
+            margin: 5rem auto; 
+            text-align: left; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .input-field { 
+            width: 100%; 
+            padding: 0.5rem; 
+            margin-top: 0.5rem; 
+            border: 1px solid #ddd; 
+            border-radius: 4px;
+        }
+        .subtitle { 
+            text-align: center; 
+            color: gray; 
+            margin-block: 20px;
+        }
+        #cart-summary {
+            margin-top: 10px;
+        }
+        #checkout-button { 
+            background-color: #3CB371; 
+            color: white; 
+            padding: 1rem 2rem; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%; 
+            margin-top: 1rem; 
+        }
+        #checkout-button:hover { 
+            background-color: #8FA163;
+        }
     </style>
 </head>
 <body>
     <div id="checkout-container">
-        <h2>إتمام الشراء</h2>
+        <h2 style="text-align: center">Checking Out</h2>
+        <div dir="ltr" class="subtitle">Acquire your resistance symbol.</div>
+        <hr>
         <div id="cart-summary"></div>
-        <p id="total-price"></p>
-        <div id="customer-info">
-            <h3>معلومات العميل</h3>
-            <input type="text" id="customer-name" placeholder="الاسم الكامل" class="input-field" required>
-            <input type="text" id="customer-address" placeholder="العنوان" class="input-field" required>
-            <input type="tel" id="customer-phone" placeholder="رقم الهاتف" class="input-field" required>
-            <input type="email" id="customer-email" placeholder="البريد الإلكتروني" class="input-field" required>
+        <p id="total-price" dir="ltr" style="font-weight: bold"></p>
+        <div dir="ltr" id="customer-info">
+            <h3 style="text-align: center">Customer Information</h3>
+            <input type="text" id="customer-name" placeholder="Full Name" class="input-field" required>
+            <input type="text" id="customer-address" placeholder="Address" class="input-field" required>
+            <input type="tel" id="customer-phone" placeholder="Phone Number" class="input-field" required>
+            <input type="email" id="customer-email" placeholder="Email" class="input-field" required>
         </div>
-        <button id="checkout-button">تأكيد الطلب</button>
+        <button id="checkout-button">Confirm Order</button>
     </div>
 
     <script>
-        // Ensure everything loads before executing scripts
         window.onload = function () {
-            console.log("🚀 Page Loaded!");
-
             const firebaseConfig = {
                 apiKey: "AIzaSyAsdvP3gWwZmqvsS9t1_4Q9IHx5n-XqvKg",
                 authDomain: "olivesstore-de66a.firebaseapp.com",
@@ -44,67 +78,53 @@
                 appId: "1:345291995879:web:b172fe1a83c0ecacc2c042"
             };
 
-            console.log("📡 Initializing Firebase...");
             firebase.initializeApp(firebaseConfig);
             const db = firebase.firestore();
-            console.log("✅ Firebase Initialized!");
 
             const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
             const cartSummary = document.getElementById('cart-summary');
             const totalPriceElement = document.getElementById('total-price');
 
+            // Group items by name and price
+            const aggregated = cartItems.reduce((acc, item) => {
+                const key = `${item.name}-${item.price}`;
+                acc[key] = acc[key] || { ...item, quantity: 0 };
+                acc[key].quantity++;
+                return acc;
+            }, {});
+
             let totalPrice = 0;
-            cartSummary.innerHTML = cartItems.map(item => {
-                totalPrice += parseFloat(item.price.replace('$', ''));
-                return `<div><span>${item.name}</span> - <span>${item.price}</span></div>`;
+            cartSummary.innerHTML = Object.values(aggregated).map(item => {
+                const price = parseFloat(item.price.replace('$', ''));
+                const itemTotal = price * item.quantity;
+                totalPrice += itemTotal;
+                return `<div>${item.name} × ${item.quantity} - $${itemTotal.toFixed(2)}</div>`;
             }).join('');
-            totalPriceElement.innerText = `الإجمالي: $${totalPrice.toFixed(2)}`;
 
-            const checkoutButton = document.getElementById('checkout-button');
+            totalPriceElement.innerText = `- Total: $${totalPrice.toFixed(2)}`;
 
-            // Debugging: Ensure button exists before adding event listener
-            if (!checkoutButton) {
-                console.error("❌ Checkout button not found!");
-                return;
-            }
-
-            checkoutButton.addEventListener('click', async () => {
-                console.log("🛒 Checkout button clicked!");
-
+            document.getElementById('checkout-button').addEventListener('click', async () => {
                 const name = document.getElementById('customer-name').value.trim();
                 const address = document.getElementById('customer-address').value.trim();
                 const phone = document.getElementById('customer-phone').value.trim();
                 const email = document.getElementById('customer-email').value.trim();
 
                 if (!name || !address || !phone || !email) {
-                    alert('❌ يرجى ملء جميع الحقول المطلوبة.');
-                    console.warn("⚠️ Missing required fields!");
-                    return;
-                }
-
-                if (cartItems.length === 0) {
-                    alert('⚠️ السلة فارغة! أضف عناصر قبل الإتمام.');
-                    console.warn("🛑 Attempted checkout with empty cart.");
+                    alert('❌ Please fill all required fields.');
                     return;
                 }
 
                 try {
-                    console.log("📡 Sending order to Firebase...");
                     await db.collection('orders').add({
                         customer: { name, address, phone, email },
                         items: cartItems,
                         total: totalPrice,
                         timestamp: new Date()
                     });
-
-                    console.log("✅ Order successfully saved in Firebase!");
-                    alert('✅ تم تقديم الطلب بنجاح! شكراً لتسوقك معنا.');
-
-                    localStorage.removeItem('cartItems'); // Clear cart after success
+                    localStorage.removeItem('cartItems');
                     window.location.href = 'index.html';
                 } catch (error) {
-                    console.error('❌ خطأ أثناء تقديم الطلب:', error);
-                    alert('⚠️ فشل تقديم الطلب. الرجاء المحاولة مرة أخرى.');
+                    alert('⚠️ Failed to submit order. Please try again.');
                 }
             });
         };

@@ -10,7 +10,6 @@
             font-family: Arial, sans-serif;
             text-align: center;
         }
-
         #cart-container {
             padding: 2rem;
             border-radius: 8px;
@@ -19,45 +18,36 @@
             margin: 2rem auto;
             text-align: left;
         }
-
-	#cart-container h2 {
-	    text-align: center; 
-	}
-
+        #cart-container h2 {
+            text-align: center; 
+        }
         .cart-item {
             display: flex;
             justify-content: space-between;
             padding: 0.5rem 0;
             border-bottom: 1px solid #ddd;
-	    font-size: 1.5rem;
+            font-size: 1.5rem;
         }
-
         #total-price {
             font-size: 1.2rem;
             font-weight: bold;
             margin-top: 1rem;
         }
-
         .cart-buttons {
             display: flex;
-	    align-items: center;
-	    justify-content: center;
-	    gap: 2.5rem;
+            align-items: center;
+            justify-content: center;
+            gap: 2.5rem;
             margin-top: 1rem;
         }
-	
-        button {
+        .cart-buttons button {
+            background-color: #3CB371; 
             color: white;
             border: none;
             padding: 1rem 2rem;
             border-radius: 4px;
             cursor: pointer;
         }
-	
-        .cart-buttons button {
-            background-color: #6b8e23;
-        }
-
         .cart-buttons button:hover {
             background-color: #8FA163;
         }
@@ -68,7 +58,6 @@
         <h2>سلة المشتريات</h2>
         <div id="cart-list"></div>
         <p id="total-price"></p>
-        
         <div class="cart-buttons">
             <button onclick="window.location.href='index.html'">متابعة التسوق</button>
             <button onclick="clearCart()">إفراغ السلة</button>
@@ -81,18 +70,30 @@
         const cartList = document.getElementById('cart-list');
         const totalPriceElement = document.getElementById('total-price');
 
+        function aggregateItems(items) {
+            const grouped = {};
+            items.forEach(item => {
+                const key = `${item.name}-${item.price}`;
+                grouped[key] = grouped[key] || { ...item, quantity: 0 };
+                grouped[key].quantity++;
+            });
+            return Object.values(grouped);
+        }
+
         function updateCart() {
             cartList.innerHTML = '';
             let totalPrice = 0;
-            
-            if (cartItems.length > 0) {
-                cartItems.forEach((item, index) => {
-                    totalPrice += parseFloat(item.price.replace('$', ''));
+            const aggregated = aggregateItems(cartItems);
+
+            if (aggregated.length > 0) {
+                aggregated.forEach(item => {
+                    const itemTotal = parseFloat(item.price.replace('$', '')) * item.quantity;
+                    totalPrice += itemTotal;
                     const itemDiv = document.createElement('div');
                     itemDiv.classList.add('cart-item');
                     itemDiv.innerHTML = `
-                        <span>${item.name} - ${item.price}</span>
-                        <button onclick="removeItem(${index})">❌</button>
+                        <span>${item.name} - ${item.price} × ${item.quantity}</span>
+                        <button onclick="removeAll('${item.name}', '${item.price}')">❌</button>
                     `;
                     cartList.appendChild(itemDiv);
                 });
@@ -103,15 +104,15 @@
             }
         }
 
-        function removeItem(index) {
-            cartItems.splice(index, 1);
+        function removeAll(name, price) {
+            cartItems = cartItems.filter(item => !(item.name === name && item.price === price));
             localStorage.setItem('cartItems', JSON.stringify(cartItems));
             updateCart();
         }
 
         function clearCart() {
             localStorage.removeItem('cartItems');
-	    cartItems = [];
+            cartItems = [];
             updateCart();
         }
 
