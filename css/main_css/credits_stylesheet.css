@@ -49,18 +49,30 @@
     font-weight: bold;
 }
 
+html, body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
 body{
-    margin: 0;
-    padding: 0;
     background-image: url(/assets/backgrounds/pixel-space.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     transform: translateY(3rem);
     animation: FadeIn 900ms ease forwards;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    margin-bottom: -50px; /* same as footer height */
+    padding-bottom: 50px; /* same as footer height */
+    box-sizing: border-box;
+	
 }
 
 header {
@@ -111,7 +123,7 @@ a:hover {
     text-decoration: underline;
 }
 
-footer {
+.footer-container {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -121,23 +133,12 @@ footer {
     font-size: 28px;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
 }
 
-.ftrCol2 {
-    display: flex;
-    justify-content: center;
-}
-
-.ftrCol2 > * {
-    width: 70px;
-    font-size: 40px;
-    color: #EAE3D2;
-    gap: 2.5rem;
-}
-
-.ftrCol2 > *:hover {
-    color: #AAA;
+.footer-column > a {
+	margin-inline: 10px;
+	font-size: 40px;
+	color: #EAE3D2;
 }
 
 @keyframes FadeIn {

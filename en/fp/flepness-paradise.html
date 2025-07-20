@@ -10,6 +10,7 @@
     <title>Flepness Paradise - fp</title>
 </head>
 <body>
+<div class="content-wrapper">
     <header id="s0">
         <div class="btnContainer">
             <div class="goBackBtn"><a href="/en/fp/"><button><i class="fa-solid fa-arrow-left"></i></button></a></div>
@@ -252,14 +253,43 @@ backToTopBtn.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 </script>
-<footer>
-    <div class="ftrCol1">
-    Belal J. Hamdan - 2024.
-    </div>
-    <div class="ftrCol2">
-    <a href="/fp/flepness-paradise.html"><i class="fa-solid fa-language"></i></a>
-    <a href="/en/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
-    </div>
-</footer>
+</div>
+
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
 </body>
 </html>

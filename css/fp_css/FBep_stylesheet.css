@@ -54,19 +54,28 @@
 }
 
 /* ===Start of CSS=== */
-html { height: 100%; }
+html { 
+	padding: 0;
+	margin: 0;
+	height: 100%; 
+}
 
 body{
-    margin: 0;
-    padding: 0;
     background-image: url(/assets/backgrounds/pixel-space.png);
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+}
+
+.content-wrapper {
     display: flex;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
     min-height: 100%;
+    margin-bottom: -50px; /* same as footer height */
+    padding-bottom: 50px; /* same as footer height */
+    box-sizing: border-box;
+	
 }
 
 header{
@@ -216,9 +225,8 @@ hr{
     border-bottom: 1px solid #fff;
 }
 
-footer {
+.footer-container {
     display: flex;
-    align-self: stretch;
     align-items: center;
     justify-content: space-around;
     background-color: #000;
@@ -227,23 +235,12 @@ footer {
     font-size: 28px;
     text-align: center;
     padding: 20px;
-    margin-top: auto;
 }
 
-.ftrCol2 {
-    display: flex;
-    justify-content: center;
-}
-
-.ftrCol2 > * {
-    width: 70px;
-    font-size: 40px;
-    color: #EAE3D2;
-    gap: 2.5rem;
-}
-
-.ftrCol2 > *:hover {
-    color: #AAA;
+.footer-column > a {
+	margin-inline: 10px;
+	font-size: 40px;
+	color: #EAE3D2;
 }
 
 @media (orientation: portrait){

@@ -10,7 +10,7 @@
     <title>دسكورد - فلبسايت</title>
 </head>
 <body>
-
+<div class="content-wrapper">
     <h1><a style="margin-left: 20px"href="/about.html"><i class="fa-regular fa-address-card"></i></a> معلومات الدسكورد <a style="margin-right: 20px"href="/index.html"><i class="fa-solid fa-house"></i></a> </h1>
     <hr>
     <div class="profile">
@@ -42,16 +42,45 @@
         <div class="offlineBall"></div> <span class="currentOffline">XX Offline</span>
         <button class="joinButton"><a href="https://discord.gg/TKemb7nG4P">Join</a></button>
     </div>
+</div>
 
-<footer>
-    <div class="ftrCol2">
-    <a href="/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
-    <a href="/en/discord.html"><i class="fa-solid fa-language"></i></a>
-    </div>
-     <div class="ftrCol1">
-    .بلال جمال حمدان - 2024
-    </div>
-</footer>
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
+
 <style>
 h1 a {
     margin-inline: 10px;

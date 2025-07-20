@@ -10,6 +10,7 @@
     <title>فلبنس برودكاست - fp</title>
 </head>
 <body>
+<div class="content-wrapper">
     <header>
         <div class="btnContainer">
             <div class="goBackBtn"><a href="/fp/"><button><i class="fa-solid fa-arrow-right"></i></button></a></div>
@@ -42,18 +43,48 @@
     <h2 class="secondHeading">للآن، ما المتوقع بالنسبة لإف بي؟</h2>
     <p>الحقيقة المرّة هي لا شيء، لأنني أود التركيز على الدراسة، ولكن ربما في المستقبل سترون فلبتور يستحق تلك الشارة.</p>
 </section>
-<footer>
-    <div class="ftrCol1">
-	   بلال جمال حمدان - 2024.
-    </div>
-    <div class="ftrCol2">
-    <a href="/en/fp/flepness-broadcast/"><i class="fa-solid fa-language"></i></a>
-    <a href="/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
-    </div>
-</footer>
+</div>
+
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
+
 <style>
-*, .secondHeading { font-family: "Changa"; }
-ol { text-align: center; }
+	*, .secondHeading { font-family: "Changa"; }
+	ol { text-align: center; }
 </style>
 </body>
 </html>
