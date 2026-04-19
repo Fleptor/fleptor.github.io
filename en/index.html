@@ -8,6 +8,7 @@
     	<script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="content-wrapper">
 <h1>FLEPSITE</h1>
 <h2 class="subtitle">The website for and made by:<br>Belal Hamdan.</h2>
 <div class="info-board">
@@ -49,17 +50,46 @@
 </div>
 <div class="blog box">
     <p>Blog:</p>
-    <a href="/en/blog.html"><i style="font-size: 100px" class="fa-regular fa-file-lines" aria-hidden="true"></i></a>
+    <a href="/en/blog/"><i style="font-size: 100px" class="fa-regular fa-file-lines" aria-hidden="true"></i></a>
 </div>
 </div>
-<footer>
-    <div class="ftrCol1">
-    Sophomore year :) - Belal J. Hamdan - 2024.
-    </div>
-    <div class="ftrCol2">
-    <a href="/index.html"><i class="fa-solid fa-language"></i></a>
-    <a href="/en/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
-    </div>
-</footer>
+</div>
+
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
 </body>
 </html>

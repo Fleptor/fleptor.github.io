@@ -1,17 +1,18 @@
 /* ===Declaring Variables=== */
-:root{
+:root {
     scroll-behavior: smooth;
-    --nav-bgc:#1C588C;
-    --nav-hover-bgc:#1C588C80;
-    --nav-selected-bgc:#15446e;
+    --nav-bgc: #1C588C;
+    --nav-hover-bgc: #1C588C80;
+    --nav-selected-bgc: #15446e;
     --heading-font: 'Press Start 2P';
-    --page-font:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --page-font: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --textBlock-font: "Changa";
-    --heading-shadow:#1C588CE6;
+    --heading-shadow: #1C588CE6;
     --textBlock-bgc: #1C588C80;
-    --footer-bgc:#0e2c46;
+    --footer-bgc: #0e2c46;
 
 }
+
 @font-face {
     font-family: "Press Start 2P";
     src: url(/assets/fonts/PressStart2P.woff);
@@ -23,7 +24,7 @@
 }
 
 /* ===Start of CSS=== */
-body{
+body {
     padding: 0px;
     margin: 0px;
     background-image: url(/assets/backgrounds/pixel-space.png);
@@ -35,7 +36,7 @@ body{
     min-height: 100vh;
 }
 
-header{
+header {
     display: flex;
     flex-direction: row;
     width: 84%;
@@ -45,19 +46,19 @@ header{
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.blogHeading{
+.blogHeading {
     font-size: 48px;
     font-family: var(--heading-font);
     text-shadow: 0px 6px var(--heading-shadow);
 }
 
-.btnContainer{
+.btnContainer {
     width: auto;
     margin-inline: auto;
     margin-block: auto;
 }
 
-.goBackBtn button{
+.goBackBtn button {
     color: #fff;
     background-color: var(--heading-shadow);
     width: 50px;
@@ -69,21 +70,21 @@ header{
     padding-top: 4px;
 }
 
-.goBackBtn button{
+.goBackBtn button {
     background-color: var(--nav-selected-bgc);
 }
 
-.topHeading{
+.topHeading {
     width: auto;
     margin-inline: auto;
 }
 
-.heading{
+.heading {
     margin-inline: auto;
     max-width: 740px;
 }
 
-.mainHeading{
+.mainHeading {
     margin-block: 20px 0;
     font-family: var(--textBlock-font);
     font-size: 60px;
@@ -92,7 +93,7 @@ header{
     text-align: right;
 }
 
-.postTextContainer{
+.postTextContainer {
     margin-inline: auto;
     max-width: 740px;
 }
@@ -110,30 +111,30 @@ header{
     margin-bottom: 100px;
 }
 
-.postText p{
+.postText p {
     margin: 0;
 }
 
-.postText li{
+.postText li {
     list-style: none;
 }
 
-.postText hr{
+.postText hr {
     width: 95%;
     color: #aaa;
 }
 
-.postText a{
+.postText a {
     color: #1C588C;
     text-decoration: none;
 }
 
-.postText a:hover{
+.postText a:hover {
     text-decoration: underline;
 }
 
 /* Footer <--- */
-footer{
+footer {
     margin-bottom: 0;
     background-color: #000;
     color: white;
@@ -145,11 +146,11 @@ footer{
     margin-top: auto;
 }
 
-.ftrCol1{
+.ftrCol1 {
     margin: auto;
 }
 
-.ftrCol2{
+.ftrCol2 {
     margin: auto;
     display: flex;
     justify-content: center;
@@ -157,11 +158,11 @@ footer{
     flex-direction: column;
 }
 
-.ftrCol2 a{
+.ftrCol2 a {
     text-decoration: none;
 }
 
-.ftrCol2 button{
+.ftrCol2 button {
     font-size: 25px;
     width: 50px;
     height: 50px;
@@ -170,16 +171,16 @@ footer{
     color: #fff;
 }
 
-.ftrCol2 button:active{
+.ftrCol2 button:active {
     background-color: var(--nav-selected-bgc);
 }
 
-.ftrNavTop{
+.ftrNavTop {
     display: flex;
 }
 
 
-.ftrNavTop a{
+.ftrNavTop a {
     margin-inline: 8px;
     border: 1px solid #fff;
     width: 78px;
@@ -189,17 +190,17 @@ footer{
     text-align: center;
 }
 
-.ftrNavTop a:hover{
+.ftrNavTop a:hover {
     background-color: #40c4ff;
 }
 
-.ftrNav{
+.ftrNav {
     color: mediumaquamarine;
     margin-top: 16px;
     text-align: left;
 }
 
-.ftrNav a{
+.ftrNav a {
     padding-inline: 8px;
     margin-inline: 4px;
     color: #fff;
@@ -207,34 +208,34 @@ footer{
     text-decoration: none;
 }
 
-.ftrNav a:hover{
+.ftrNav a:hover {
     background-color: #40c4ff;
 }
 
 
 /* Media Queries <--- */
-@media (orientation: portrait){
-    .mainHeading{
+@media (orientation: portrait) {
+    .mainHeading {
         font-size: 40px;
         text-shadow: 3px 3px var(--heading-shadow);
         text-align: center;
     }
 
-    .heading{
+    .heading {
         display: grid;
         text-align: center;
-        margin:0;
+        margin: 0;
     }
 
-    .postText{
+    .postText {
         margin-bottom: 50px;
     }
 
-    .ftrCol1{
+    .ftrCol1 {
         font-size: 18px;
     }
 
-    footer{
+    footer {
         display: flex;
         flex-direction: column;
         gap: 0.4cm;

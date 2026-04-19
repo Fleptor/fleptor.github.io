@@ -2,27 +2,37 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <title>أعمال فوق أعمال - المدونة</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
     <link rel="stylesheet" href="/css/bp_stylesheet.css">
     <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-     <title>أعمال فوق أعمال - المدونة</title>
 </head>
 <body>
-    <header id="topOfPage">
-        <div class="btnContainer">
-            <div class="goBackBtn"><a href="/blog/"><button><i class="fa-solid fa-arrow-right"></i></button></a></div>
-        </div>
-        <div class="topHeading">
-         <h1 class="blogHeading">BLOG</h1>
-        </div>
-    </header>
-    <div class="heading">
-    <h1 class="mainHeading">أعمال فوق أعمال</h1>
-    </div>
-    <div class="postTextContainer">
-        <div class="postText">
+<header> 
+    <button onclick="handleBack()"><i class="fa-solid fa-arrow-right"></i></button>
+    BLOG
+
+</header>
+
+<script>
+  function handleBack() {
+    if (document.referrer && document.referrer !== window.location.href) {
+      window.history.back();
+    } else {
+      // Fallback: go to a default page (e.g. blog index)
+      const lang = document.documentElement.lang;
+      const fallback = lang === 'en' ? '/en/blog/' : '/blog/';
+      window.location.href = fallback;
+    }
+  }
+</script>
+</body>
+</html>
+
+
+
    <p>أستغليت عطلتك في إنشاء هذا الموقع وتحديث فلِبنس بارادايس، لماذا؟ ماذا عن باقي الأشياء؟ ماذا عن دراستك؟
     <br>
     <hr>
@@ -38,14 +48,3 @@
       ألهذا أنشأت فلِبسايت؟ لكي يكون إعتذار لإرضاء نفسك أولًا ثم الآخرين؟
     لا، ليس هذا السبب فقط بل لكي أقدر على مشاركة أعمالي ومنشورات مدونتي مع العالم ولكي أقدر على مساعدة الآخرين وتعلم كيفية تصميم المواقع.
    </p>
-        </div>
-    </div>
-    <footer>
-        <div class="ftrCol1">
-            أعمال فوق أعمال - المدونة
-        </div>
-        <div class="ftrCol2">
-            <a href="#topOfPage"><button><i class="fa-solid fa-arrow-up"></i></button></a>
-        </div>
-    </footer>
-</html>

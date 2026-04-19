@@ -10,10 +10,11 @@
     <title>fp - Flepsite</title>
 </head>
 <body>
+<div class="content-wrapper">
     <nav class="mainNav">
         <a href="/en/index.html">Home</a>
         <a href="/en/about.html">About</a>
-        <a href="/en/blog.html">Blog</a>
+        <a href="/en/blog/">Blog</a>
         <a class="selected" href="/en/fp/">fp</a>
     </nav>
     <div class="heading">
@@ -22,20 +23,49 @@
     </div>
     <h2 class="subtitle">The portal of all works Fleptor.</h2>
     <div class="box">
-        <a href="https://github.com/Fleptor/fleptor.github.io"><img src="/assets/files/flepsite-logo.png" alt="Flepsite's logo."></a>
+        <a target="_blank" href="https://github.com/Fleptor/fleptor.github.io"><img src="/assets/files/flepsite-logo.png" alt="Flepsite's logo."></a>
         <a href="/en/fp/flepness-paradise.html"><img src="/assets/files/flepness-paradise-logo.jpg" alt="Flepness Paradise's logo."></a>
 	<a href="/en/fp/flepness-broadcast/"><img src="/assets/files/flepness-broadcast-logo.png" alt="Flepness Broadcast's logo."></a>
 	<a target="_blank" href="https://github.com/Fleptor/Fleppy-Rice"><img src="/assets/files/fleppy-rice-logo.png" alt="Flepness Broadcast's logo."></a>
         <a href="/en/fp/miscellaneous.html"><img src="/assets/files/misc-logo.png" alt="Miscellaneous page logo."></a>
     </div>
-<footer>
-    <div class="ftrCol1">
-    Belal J. Hamdan - 2024.
-    </div>
-    <div class="ftrCol2">
-    <a href="/fp/"><i class="fa-solid fa-language"></i></a>
-    <a href="/en/credits.html"><i class="fa-solid fa-ellipsis"></i></a>
-    </div>
-</footer>
+</div>
+
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
 </body>
 </html>
