@@ -10,6 +10,27 @@
     <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
     <title>About - Flepsite</title>
 </head>
+<<<<<<< HEAD
+=======
+<body>
+<div class="content-wrapper">
+    <nav class="mainNav">
+        <a href="/en/index.html">Home</a>
+        <a class="selected" href="/en/about.html">About</a>
+        <a href="/en/blog/">Blog</a>
+        <a href="/en/fp/">fp</a>
+    </nav>
+    <div class="heading">
+    <h1 class="mainHeading">ABOUT</h1>
+    </div>
+    <div class="aboutGrid">
+      <div class="aboutMe">
+        <h2 class="utility2">About Me</h2> 
+        <hr>  
+        <!--<p>My name is Belal Hamdan and I’m a 17 years old student living in Jordan, and welcome to my website. I’m currently in 12th grade and hoping to finish my high school education and enroll in a university. Online I’m known as Fleptor, and this is the portal for all my personal works and my blog, here you’ll find out about my life, future plans, and more.<hr class="utility1">I made this website to have my own platform where I can share my progress, works and blog-posts with the world in a neat and easy-to-access way and to help others.
+        </p>-->
+    <p>My name is Belal Jamal Hamdan, and I'm a 19 years old engineering student at the Faculty of Engineering Technology - Balqa Applied University and born and raised in Al Russeifa Jordan, with Palestinian roots, and welcome to my website.
+>>>>>>> bb7bfe2e5fe04f7d1391bd0bd760fb3ae4bb4aa1
 
 <body>
     <div class="content-wrapper">
@@ -52,6 +73,7 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 
     <div id="footer"></div>
     <script>
@@ -89,6 +111,46 @@
                 .catch(err => console.error("Footer injection error:", err));
         });
     </script>
+=======
+</div>
+
+<div id="footer"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const lang = document.documentElement.lang || "en";
+
+    fetch('/components/footer.html')
+      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
+      .then(html => {
+        document.getElementById('footer').innerHTML = html;
+
+        document.querySelectorAll('.footer-lang').forEach(div => {
+          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
+        });
+
+        const year = new Date().getFullYear();
+        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
+        const yearSpan = visibleFooter.querySelector(".footer-year");
+        if (yearSpan) yearSpan.textContent = year;
+
+        const currentPath = window.location.pathname;
+        let targetPath;
+
+        if (lang === 'ar') {
+          targetPath = '/en' + currentPath;
+        } else if (lang === 'en') {
+          targetPath = currentPath.replace(/^\/en/, '') || '/';
+        }
+
+        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
+        if (langSwitchAnchor && targetPath) {
+          langSwitchAnchor.setAttribute('href', targetPath);
+        }
+      })
+      .catch(err => console.error("Footer injection error:", err));
+  });
+</script>
+>>>>>>> bb7bfe2e5fe04f7d1391bd0bd760fb3ae4bb4aa1
 </body>
 
 </html>
