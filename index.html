@@ -1,105 +1,139 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-	<meta charset="UTF-8">
-	<title>الرئيسية - فلبسايت</title>
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="/css/main_css/style.css">
-    	<link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    	<script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-	<style>
-		* {
-		    font-family: Changa;
-		}
-		.subtitle {
-		    font-family: Changa;
-		}
-	</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أماكن — بلال حمدان</title>
+  <meta name="description" content="أماكن بلال حمدان على الويب: فلبسايت، ملف الأعمال، Fleptix، وتجارب ومشاريع أخرى.">
+  <link rel="canonical" href="https://belalhamdan.com/">
+  <link rel="alternate" hreflang="ar" href="https://belalhamdan.com/">
+  <link rel="alternate" hreflang="en" href="https://belalhamdan.com/en/">
+  <link rel="alternate" hreflang="x-default" href="https://belalhamdan.com/">
+  <link rel="icon" type="image/png" href="/assets/files/title-image.png">
+  <link rel="stylesheet" href="/css/places.css">
 </head>
 <body>
-<div class="content-wrapper">
-<h1>FLEPSITE</h1>
-<h2 class="subtitle">الموقع الذي من أجل وبواسطة:<br>بلال حمدان.</h2>
-<div class="info-board">
-<div class="about box">
-    <p>حولي</p>
-   <a href="/about.html"><i style="font-size: 80px" class="fa-regular fa-address-card"></i></a> 
-</div>
-<div class="featured box">
-    <h2 style="font-family:Orbitron;">Flepness Portal (<a style="font-family: Orbitron;"href="/fp/">fp</a>)</h2>
-    <span style="font-family: Changa;font-size: 20px">المكان الذي يضم جميع أعمال بلال الشخصية.</span>
-    <hr>
-    <ul class="fp-list">
-        <li><p>الموقع</p><a href="https://github.com/Fleptor/fleptor.github.io"><i style="font-size:48px" class="fa-solid fa-image"></i></a></li>
-        <li><p>خادم الدسكورد</p><a href="/fp/flepness-paradise.html"><i style="font-size:48px" class="fa-brands fa-discord"></i></a></li>
-        <li><p>برنامج اليوتيوب</p><a href="/fp/flepness-broadcast/"><i style="font-size:48px" class="fa-solid fa-video"></i></a></li>
-        <li><p>المتفرقة</p><a href="/fp/miscellaneous.html"><i style="font-size:48px" class="fa-solid fa-list"></i></a></li>
-    </ul>
-</div>
-<div class="whats-new box">
-    <h2>ما الجديد</h2>
-    <span style="font-family: Changa;font-size: 20px">تفقد ما الجديد, (مرر لرؤية المزيد).</span>
-    <hr>
-    <ul class="scrollable">
-        <!--<li><a href="#">BP: The Fleptor Persona.</a><br>
-            Are Fleptor and Belal Hamdan the same person or is Fleptor Belal's alter ego? Had Belal's idea of the Fleptor persona changed overtime?
-        </li> -->
-    <li><a href="#">تصميم الصفحة الرئيسية الجديد</a><br>
-        إعادة تصميم الصفحة الرئيسية المنتظر آن أوانه أخيرًا!
-    </li>
-    <hr>
-    <li><a href="#">صفحة فبسايت الجديدة</a><br>
-        صفحة جديدة كليًا أضيفت للموقع والتي من خلالها بإمكانكم تفقُّد عملية تطوير فلبسايت بالتفصيل!
-    </li>
-    <hr>
-    <li><a href="/fp/flepness-paradise.html#sep23mn1">أيلو23فر1</a><br>
-        آخر تحديث لفللبنس بارادايس للآن، والذي يجلب أفكار وميزات جديدة!
-    </li>
-    </ul>
-</div>
-<div class="blog box">
-    <p>المدونة</p>
-    <a href="/blog/"><i style="font-size: 80px" class="fa-regular fa-file-lines" aria-hidden="true"></i></a>
-</div>
-</div>
-</div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+  <a class="skip" href="#places">انتقل إلى الأماكن</a>
+  <div class="shell">
+    <header class="topbar">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">F</span>بلال حمدان</a>
+      <a class="language" href="/en/" lang="en" hreflang="en">English</a>
+    </header>
+    <main id="places">
+      <section class="intro" aria-labelledby="title">
+        <div>
+          <p class="eyebrow"><bdi>belalhamdan.com</bdi> / أماكن</p>
+          <h1 id="title">إلى أين اليوم؟</h1>
+          <p>أنا بلال، وهذه أماكني على الويب. أعمال، تجارب، وحكايات؛ اختر مكانًا وابدأ الزيارة.</p>
+        </div>
+        <div class="coordinate"><strong>06</strong><span>أماكن تحت عنوان واحد</span></div>
+      </section>
+      <section aria-labelledby="directory-title">
+        <div class="section-label"><h2 id="directory-title">اختر وجهتك</h2><span>كل مكان يحكي حكاية</span></div>
+        <ul class="places">
+        <li class="place" style="--accent:#83e3f2">
+          <a class="place-link" href="/flepfolio/" aria-labelledby="place-1" aria-describedby="description-1">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M8 16h8M8 18h5"/><circle cx="12" cy="8" r="2"/><path d="M8 13c0-3 8-3 8 0"/></svg></span><span class="category">ملف الأعمال</span></div>
+            <h3 id="place-1"><bdi>Flepfolio</bdi></h3>
+            <p class="description" id="description-1">تعرّف عليّ، وعلى مشاريعي ومهاراتي في تطوير الويب والأنظمة.</p>
+            <span class="address">/flepfolio/</span>
+          </a>
+        </li>
+        <li class="place" style="--accent:#a8b5ff">
+          <a class="place-link" href="/flepsite/" aria-labelledby="place-2" aria-describedby="description-2">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 11 9-8 9 8M5 10v11h14V10M10 21v-7h4v7"/></svg></span><span class="category">الموقع الأصلي</span></div>
+            <h3 id="place-2"><bdi>Flepsite</bdi></h3>
+            <p class="description" id="description-2">موقعي الأول، بما فيه من كتابات وأعمال شخصية وذكريات.</p>
+            <span class="address">/flepsite/</span>
+          </a>
+          <details>
+            <summary>استكشف المزيد</summary>
+            <ul class="page-links">
+              <li><a href="/about.html">حولي</a></li>
+              <li><a href="/blog/">المدونة</a></li>
+              <li><a href="/fp/">بوابة Flepness</a></li>
+              <li><a href="/fp/flepness-paradise.html">فلبنس بارادايس</a></li>
+              <li><a href="/fp/miscellaneous.html">أعمال متفرقة</a></li>
+              <li><a href="/discord.html">معلومات الدسكورد</a></li>
+              <li><a href="/credits.html">الاعتمادات</a></li>
+              <li><a href="/blog/work-on-work.html">أعمال فوق أعمال</a></li>
+              <li><a href="/fp/flepness-broadcast/">فلبنس برودكاست</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-one.html">برودكاست — الحلقة 1</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-two.html">برودكاست — الحلقة 2</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-three.html">برودكاست — الحلقة 3</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-four.html">برودكاست — الحلقة 4</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-five.html">برودكاست — الحلقة 5</a></li>
+              <li><a href="/fp/flepness-broadcast/episode-six.html">برودكاست — الحلقة 6</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="place" style="--accent:#79dabb">
+          <a class="place-link" href="/Fleptix/" aria-labelledby="place-3" aria-describedby="description-3">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg></span><span class="category">أداة للأنظمة</span></div>
+            <h3 id="place-3"><bdi>Fleptix</bdi></h3>
+            <p class="description" id="description-3">مشروع لمراقبة حاويات Docker، مع بيانات مباشرة وخيارات استعادة الحالة.</p>
+            <span class="address">/Fleptix/</span>
+          </a>
+          <details>
+            <summary>استكشف المزيد</summary>
+            <ul class="page-links">
+              <li><a href="/Fleptix/open-source.html">المصدر المفتوح والترخيص</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="place" style="--accent:#bade89">
+          <a class="place-link" href="/pixel-console/" aria-labelledby="place-4" aria-describedby="description-4">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="1"/><path d="m6 9 3 3-3 3m6 0h5"/></svg></span><span class="category">تحدّي تفاعلي</span></div>
+            <h3 id="place-4"><bdi>Pixel Console</bdi></h3>
+            <p class="description" id="description-4">نظام متعطّل وأجزاء مفقودة. ادخل الطرفية وحاول استعادة النظام.</p>
+            <span class="address">/pixel-console/</span>
+          </a>
+          <details>
+            <summary>استكشف المزيد</summary>
+            <ul class="page-links">
+              <li><a href="https://pixel.belalhamdan.com/">زيارة pixel.belalhamdan.com</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="place" style="--accent:#f5cd80">
+          <a class="place-link" href="/Xtreme/" aria-labelledby="place-5" aria-describedby="description-5">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5m-3-14-4 18"/></svg></span><span class="category">مجتمع وبرمجة</span></div>
+            <h3 id="place-5"><bdi>IEEEXtreme 20.0</bdi></h3>
+            <p class="description" id="description-5">دليل طلاب IEEE BAU للمسابقة: التسجيل، التدريب، وكل ما تحتاجه للبداية.</p>
+            <span class="address">/Xtreme/</span>
+          </a>
+          <details>
+            <summary>استكشف المزيد</summary>
+            <ul class="page-links">
+              <li><a href="/Xtreme/sources.html">مصادر الدليل</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="place" style="--accent:#efa5b9">
+          <a class="place-link" href="/Web-Testing/" aria-labelledby="place-6" aria-describedby="description-6">
+            <div class="card-top"><span class="symbol" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 3h6m-5 0v7l-6 9c-1 2 1 2 2 2h12c1 0 3 0 2-2l-6-9V3M7 16h10"/></svg></span><span class="category">مساحة تجارب</span></div>
+            <h3 id="place-6"><bdi>Web Testing</bdi></h3>
+            <p class="description" id="description-6">تجارب مبكرة في تطوير الويب، من Firebase إلى تسجيل الدخول.</p>
+            <span class="address">/Web-Testing/</span>
+          </a>
+          <details>
+            <summary>استكشف المزيد</summary>
+            <ul class="page-links">
+              <li><a href="/Web-Testing/firestore.html">تجربة Firestore</a></li>
+              <li><a href="/Web-Testing/signin.html">تسجيل الدخول</a></li>
+              <li><a href="/Web-Testing/signup.html">إنشاء حساب</a></li>
+              <li><a href="/Web-Testing/reset-password.html">إعادة تعيين كلمة المرور</a></li>
+              <li><a href="/Web-Testing/dashboard.html">لوحة التحكم (تتطلب تسجيل الدخول)</a></li>
+            </ul>
+          </details>
+        </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footnote">
+      <p>موقعي القديم ما زال هنا. ستجده في فلبسايت.</p>
+      <a href="/flepsite/">زيارة فلبسايت</a>
+    </footer>
+  </div>
 </body>
 </html>
