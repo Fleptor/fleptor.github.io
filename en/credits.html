@@ -1,32 +1,41 @@
-<!DOCTYPE html> 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/main_css/credits_stylesheet.css">
-    <title>Credits - Flepsite</title>
+
+    <title>Credits — Flepsite</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-<header>
-    <a href="/en/index.html"><i class="fa-solid fa-house"></i></a>
-    CREDITS
-    <a href="/en/about.html"><i class="fa-solid fa-user"></i></a>
-</header>
-    <h2>Resources used:</h2>
+<body class="archive-page page-credits" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/">Blog</a><a href="/en/fp/">Works</a></nav>
+  <a class="language" href="/credits.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading" id="s0"><h1>Credits</h1></header><h2>Resources used:</h2>
     <ul class="box">
         The Wallpaper:
-        <li><a href="https://wallpaperaccess.com/pixel-space">Link</a>.</li>
+        <li>
+<a href="https://wallpaperaccess.com/pixel-space">Link</a>.</li>
         <hr>
         Fonts:
-        <li style="font-family:monogram; font-size: 48px;"><span style="font-family:system-ui;">-</span> Monogram.</li>
-        <li style="font-family:Orbitron;"><span style="font-family:system-ui;">-</span> Orbitron.</li>
-        <li style="font-family:Changa;"><span style="font-family:system-ui;">-</span> Changa.</li>
-        <li class="big-font" style="font-family:'Press Start 2P';"><span style="font-family:system-ui; font-size: 32px">- </span>Press Start 2P.</li>
-        <li style="font-family: system-ui;"><span style="font-family:system-ui;">-</span> System fonts.</li>
+        <li style="font-family:monogram; font-size: 48px;">
+<span style="font-family:system-ui;">-</span> Monogram.</li>
+        <li style="font-family:Orbitron;">
+<span style="font-family:system-ui;">-</span> Orbitron.</li>
+        <li style="font-family:Changa;">
+<span style="font-family:system-ui;">-</span> Changa.</li>
+        <li class="big-font" style="font-family:'Press Start 2P';">
+<span style="font-family:system-ui; font-size: 32px">- </span>Press Start 2P.</li>
+        <li style="font-family: system-ui;">
+<span style="font-family:system-ui;">-</span> System fonts.</li>
         <hr>
         Colors:
         <li><span style="color:#fff; background-color:#1C588C;">1C588C.</span></li>
@@ -37,7 +46,7 @@
         <hr>
         Glyphs:
         <li>- <a href="https://fontawesome.com">Font Awesome</a>.</li>
-    </ul>   
+    </ul>
     <h2>Extra Information:</h2>
     <div style="margin-bottom: 50px" class="box">Thanks To:<br>Front-end development youtubers, especially:<br>- <a href="https://youtube.com/@KevinPowell">Kevin Powell</a>.<br>- <a href="https://youtube.com/@webdevsimplified">Kyle</a>.
         <br><hr>
@@ -45,45 +54,12 @@
 	<br><hr>
 	<span style="font-size:18px"><a href="https://gnu.org/">GNU project</a>, for maintaining awesome and open-source tools such as the GNU image manipulation program! Through which I've been able to create images across the website!</span>
     </div>
+<a class="back-to-top" href="#top">Back to top</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+    </div></footer>
 </body>
 </html>
-
-

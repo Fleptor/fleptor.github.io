@@ -1,71 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/main_css/fp_stylesheet.css">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>fp - Flepsite</title>
+
+
+    <title>My works — Flepsite</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script><link rel="stylesheet" href="/css/places.css">
 </head>
-<body>
-<div class="content-wrapper">
-    <nav class="mainNav">
-        <a href="/en/index.html">Home</a>
-        <a href="/en/about.html">About</a>
-        <a href="/en/blog/">Blog</a>
-        <a class="selected" href="/en/fp/">fp</a>
-    </nav>
-    <div class="heading">
-        <h1 class="mainHeading">FLEPNESS</h1>
-        <h1 class="secondHeading">PORTAL</h1>
-    </div>
-    <h2 class="subtitle">The portal of all works Fleptor.</h2>
-    <div class="box">
-        <a target="_blank" href="https://github.com/Fleptor/fleptor.github.io"><img src="/assets/files/flepsite-logo.png" alt="Flepsite's logo."></a>
-        <a href="/en/fp/flepness-paradise.html"><img src="/assets/files/flepness-paradise-logo.jpg" alt="Flepness Paradise's logo."></a>
-	<a href="/en/fp/flepness-broadcast/"><img src="/assets/files/flepness-broadcast-logo.png" alt="Flepness Broadcast's logo."></a>
-	<a target="_blank" href="https://github.com/Fleptor/Fleppy-Rice"><img src="/assets/files/fleppy-rice-logo.png" alt="Flepness Broadcast's logo."></a>
-        <a href="/en/fp/miscellaneous.html"><img src="/assets/files/misc-logo.png" alt="Miscellaneous page logo."></a>
-    </div>
+<body class="archive-page page-portal" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/">Blog</a><a href="/en/fp/" aria-current="page">Works</a></nav>
+  <a class="language" href="/fp/index.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading classic-heading portal-heading" id="s0"><h1 lang="en" dir="ltr">
+<span class="portal-line">FLEPNESS</span> <span class="portal-line portal-accent">PORTAL</span>
+</h1>
+<p class="page-subtitle">My personal works and projects.</p>
+    </header><ul class="places">
+<li class="place"><a class="place-link" href="/flepfolio/"><div class="place-heading"><h3><bdi>Flepfolio</bdi></h3></div>
+<p class="description">My projects, web development, and systems work.</p></a></li>
+<li class="place"><a class="place-link" href="/en/fp/flepsite.html"><div class="place-heading">
+<img class="place-art" src="/assets/files/flepsite-logo.png" alt="" width="64" height="64" loading="lazy"><h3><bdi>Flepsite</bdi></h3>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+<p class="description">How this website started, with screenshots from over the years.</p></a></li>
+<li class="place"><a class="place-link" href="/Fleptix/"><div class="place-heading"><h3><bdi>Fleptix</bdi></h3></div>
+<p class="description">A Docker monitoring project with backup and recovery tools.</p></a></li>
+<li class="place"><a class="place-link" href="/pixel-console/"><div class="place-heading"><h3><bdi>Pixel Console</bdi></h3></div>
+<p class="description">A terminal puzzle. Find the missing fragments and bring the system back online.</p></a></li>
+<li class="place"><a class="place-link" href="/Xtreme/"><div class="place-heading"><h3><bdi>IEEEXtreme 20.0</bdi></h3></div>
+<p class="description">The IEEE BAU student guide to registration, practice, and the programming competition.</p></a></li>
+<li class="place"><a class="place-link" href="/Web-Testing/"><div class="place-heading"><h3><bdi>Web Testing</bdi></h3></div>
+<p class="description">My early experiments with Firebase, sign-in, and building web pages.</p></a></li>
+<li class="place"><a class="place-link" href="/en/fp/flepness-paradise.html"><div class="place-heading">
+<img class="place-art" src="/assets/files/flepness-paradise-logo.jpg" alt="" width="64" height="64" loading="lazy"><h3><bdi>Flepness Paradise</bdi></h3>
+</div>
+<p class="description">The Discord server I started in 2020, its story, and its updates.</p></a></li>
+<li class="place"><a class="place-link" href="/en/fp/flepness-broadcast/"><div class="place-heading">
+<img class="place-art" src="/assets/files/flepness-broadcast-logo.png" alt="" width="64" height="64" loading="lazy"><h3><bdi>Flepness Broadcast</bdi></h3>
+</div>
+<p class="description">Six episodes about Discord servers, their stories, and their members.</p></a></li>
+<li class="place"><a class="place-link" href="/en/fp/miscellaneous.html"><div class="place-heading">
+<img class="place-art" src="/assets/files/misc-logo.png" alt="" width="64" height="64" loading="lazy"><h3><bdi>Miscellaneous</bdi></h3>
+</div>
+<p class="description">The FP ARG, my Minecraft building video, and other experiments.</p></a></li>
+<li class="place"><a class="place-link" href="https://github.com/Fleptor/Fleppy-Rice"><div class="place-heading">
+<img class="place-art" src="/assets/files/fleppy-rice-logo.png" alt="" width="64" height="64" loading="lazy"><h3><bdi>Fleppy’s Rice</bdi></h3>
+</div>
+<p class="description">My Linux desktop setup and customizations.</p></a></li>
+</ul>
+<a class="back-to-top" href="#top">Back to top</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
+</div>
+    </div></footer>
 </body>
 </html>

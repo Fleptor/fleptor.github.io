@@ -1,29 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/main_css/discord_stylesheet.css">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>Discord - Flepsite</title>
+
+
+    <title>On Discord — Flepsite</title>
+<link rel="stylesheet" href="/css/main_css/discord_stylesheet.css">
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-    <h1><a style="margin-right: 20px"href="/en/index.html"><i class="fa-solid fa-house"></i></a> Discord Info <a style="margin-left: 20px"href="/en/about.html"><i class="fa-regular fa-address-card"></i></a></h1>
-    <hr>
+<body class="archive-page page-discord" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/">Blog</a><a href="/en/fp/">Works</a></nav>
+  <a class="language" href="/discord.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+    <header class="page-heading" id="s0"><h1>On Discord</h1></header><hr>
     <div class="profile">
             <div class="header"></div>
-            <div class="backCircle"><img src="/assets/files/discord-picture.webp" alt="Fleptor's Profile Picture"><div class="status"><div class="online"><div class="dndLine"></div></div></div></div>
-            <div class="belowHeader"><div class="displayName">Belal Hamdan<span class="userName">fleptor</span><span class="tag">#0970</span></div><img src="/assets/files/49-499889_balancelogo-discord-hypesquad-house-of-balance.png" alt="Hypesquad Discord Picture"></div>
+            <div class="backCircle">
+<img src="/assets/files/discord-picture.webp" alt="Fleptor's Profile Picture"><div class="status"><div class="online"><div class="dndLine"></div></div></div>
+</div>
+            <div class="belowHeader">
+<div class="displayName">Belal Hamdan<span class="userName">fleptor</span><span class="tag">#0970</span>
+</div>
+<img src="/assets/files/49-499889_balancelogo-discord-hypesquad-house-of-balance.png" alt="Hypesquad Discord Picture">
+</div>
             <!-- <hr> -->
             <div class="bottom">
                 <div style="padding-bottom: 0;" class="aboutMe">
                     <span>About Me</span><p>- Middle-eastern.<br>- 19 Years Old.</p>
                 </div>
                 <div style="padding-top: 0;" class="aboutMe">
-                    <span>Member Since</span> <p>21 Dec 2017</p> 
+                    <span>Member Since</span> <p>21 Dec 2017</p>
                 </div>
             </div>
     </div>
@@ -35,50 +49,19 @@
      <p class="textBlock">Consider joining my Discord Server?</p>
 
     <div class="inviteContainer">
-        <span class="inviteMsg">You've been invited to join a server</span>
+        <span class="inviteMsg">An invitation to the server</span>
         <img src="/assets/files/flepness-paradise-logo.jpg" alt="Flepness Paradise Picture">
         <p class="serverTitle">Flepness Paradise</p>
-        <div class="statusBall"></div> <span class="currentOnline">XX Online</span>
-        <div class="offlineBall"></div> <span class="currentOffline">XX Offline</span>
-        <button class="joinButton"><a href="https://discord.gg/TKemb7nG4P">Join</a></button>
-    </div>
+
+
+        <a href="https://discord.gg/TKemb7nG4P" class="button">Join the server</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+<a class="back-to-top" href="#top">Back to top</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
+</div>
+    </div></footer>
 </body>
 </html>

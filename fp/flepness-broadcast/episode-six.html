@@ -4,29 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/fp_css/FBep_stylesheet.css">
+
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>الحلقة 6 - فلبنس برودكاست</title>
+
+    <title>الحلقة 6 — فلبنس برودكاست — فلبسايت</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-    <header id="HEAD">
-        <div class="btnContainer">
-            <div class="goBackBtn"><a href="/ar/fp/flepness-broadcast/"><button><i class="fa-solid fa-arrow-right"></i></button></a></div>
-        </div>
-        <div class="heading">
-         <h1 class="fpHeading1">FLEPNESS</h1>
-         <h1 class="fpHeading2">PORTAL</h1>
-        </div>
-    </header>
-        <section class="s1">
-            <h2 class="mainHeading" style="font-size: 44px">الحلقة السادسة - فلبنس برودكاست</h2>
-            <div class="headingSub"><p>فلبنس بارادايس اثنان</p></div>
-        </section>
-<section class="s2">
+<body class="archive-page page-episode" id="top">
+<a class="skip" href="#main">انتقل إلى المحتوى</a><header class="site-header">
+  <a class="site-brand" href="/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="التنقل الرئيسي"><a href="/">الرئيسية</a><a href="/about.html">عنّي</a><a href="/blog/">المدونة</a><a href="/fp/" aria-current="page">أعمالي</a></nav>
+  <a class="language" href="/en/fp/flepness-broadcast/episode-six.html" lang="en" hreflang="en">English</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading" id="s0"><a class="back-link" href="/fp/flepness-broadcast/">كل الحلقات</a><h1>الحلقة 6 — فلبنس برودكاست</h1>
+<p class="page-subtitle">فلبنس بارادايس اثنان</p></header><section class="s2">
     <h2 class="secondHeading"></h2>
-    <p> <img src="/assets/files/FBep6img.png" alt="Flepness Broadcast Ep. #06 Picture."><hr></p>
+    <p> <img src="/assets/files/FBep6img.png" alt="Flepness Broadcast Ep. #06 Picture."></p>
+<hr>
     <p>مرحبًا بكم في الحلقة السادسة من فلبنس برودكاست، في هذه الحلقة يعمل فلبتور على شرح خادم فلبنس بارادايس اثنان.</p>
     <h2 class="secondHeading">مراجعة الحلقة</h2>
 
@@ -39,52 +36,14 @@
     </p>
 </section>
 <div class="episode-switcher">
-	<a href="/fp/flepness-broadcast/episode-five.html"><i class="fa-solid fa-forward"></i></a>
-	<a target="_blank" id="youtube" href="https://youtu.be/EALRacESTNo?si=iMOJYupijKzQoh6d"><i class="fa-brands fa-youtube"></i></a>
-	<a style="color:#aaa"><i class="fa-solid fa-backward"></i></a>
+	<a href="/fp/flepness-broadcast/episode-five.html">الحلقة السابقة</a><a href="https://youtu.be/EALRacESTNo?si=iMOJYupijKzQoh6d">شاهد الحلقة</a>
 </div>
+<a class="back-to-top" href="#top">إلى أعلى الصفحة</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>بلال جمال حمدان · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/about.html#contact">للتواصل</a><a href="/credits.html">المصادر والشكر</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
-
-<style>
-	.mainHeading, .secondHeading,
-       	footer { font-family: "Changa"; };
-</style> 
+    </div></footer>
 </body>
 </html>

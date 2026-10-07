@@ -1,32 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/fp_css/FBep_stylesheet.css">
+
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>Episode 4 - Flepness Broadcast</title>
+
+    <title>Flepness Broadcast — Episode 4 — Flepsite</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-    <header id="HEAD">
-        <div class="btnContainer">
-            <div class="goBackBtn"><a href="/en/fp/flepness-broadcast/"><button><i class="fa-solid fa-arrow-left"></i></button></a></div>
-        </div>
-        <div class="heading">
-         <h1 class="fpHeading1">FLEPNESS</h1>
-         <h1 class="fpHeading2">PORTAL</h1>
-        </div>
-    </header>
-        <section class="s1">
-            <h2 class="mainHeading">FB - Episode #04</h2>
-            <div class="headingSub"><p>Why DC 3.0 Failed</p></div>
-        </section>
-<section class="s2">
+<body class="archive-page page-episode" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/">Blog</a><a href="/en/fp/" aria-current="page">Works</a></nav>
+  <a class="language" href="/fp/flepness-broadcast/episode-four.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading" id="s0"><a class="back-link" href="/en/fp/flepness-broadcast/">All episodes</a><h1>Flepness Broadcast — Episode 4</h1>
+<p class="page-subtitle">Why DC 3.0 Failed</p></header><section class="s2">
     <h2 class="secondHeading"></h2>
-    <p> <img src="/assets/files/FBep4img.png" alt="Flepness Broadcast Ep. #04 Picture."><hr></p>
+    <p> <img src="/assets/files/FBep4img.png" alt="Flepness Broadcast Ep. #04 Picture."></p>
+<hr>
     <p>Welcome to the 4th episode of Flepness Broadcast, in this episode Fleptor discusses why DC 3.0 failed.</p>
     <h2 class="secondHeading">Episode Review</h2>
 
@@ -46,50 +43,17 @@
         Regarding the script, because of the above mentioned "trend" of topics lacking longevity meant that scripts couldn't have gone into much detail, but for what's there about the main topic was good, however Fleptor did make a mistake by mentioning the topic of the next episode in the way he did, and the the members-explaining-what-happened-to-DC-3.0 skit? it was a fun addition to the episode.
     </p>
 
-    
+
 </section>
 <div class="episode-switcher">
-	<a href="/en/fp/flepness-broadcast/episode-three.html"><i class="fa-solid fa-backward"></i></a>
-	<a target="_blank" id="youtube" href="https://youtu.be/czZwW4_xMzs?si=vo6Xzc3tHiAqAEO_"><i class="fa-brands fa-youtube"></i></a>
-	<a href="/en/fp/flepness-broadcast/episode-five.html"><i class="fa-solid fa-forward"></i></a>
+	<a href="/en/fp/flepness-broadcast/episode-three.html">Previous episode</a><a href="https://youtu.be/czZwW4_xMzs?si=vo6Xzc3tHiAqAEO_">Watch the episode</a><a href="/en/fp/flepness-broadcast/episode-five.html">Next episode</a>
 </div>
+<a class="back-to-top" href="#top">Back to top</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+    </div></footer>
 </body>
 </html>

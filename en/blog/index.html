@@ -1,60 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/main_css/blog_stylesheet.css">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>Blog - Flepsite</title>
+
+
+    <title>Blog — Flepsite</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/blog.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-    <nav id="s0" class="mainNav">
-        <a href="/en/index.html">Home</a>
-        <a href="/en/about.html">About</a>
-        <a class="selected" href="/en/blog/">Blog</a>
-        <a href="/en/fp/">fp</a>
-    </nav>
-    <div class="heading">
-        <h1 class="mainHeading">BLOG</h1>
-    </div>
+<body class="page-blog" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/" aria-current="page">Blog</a><a href="/en/fp/">Works</a></nav>
+  <a class="language" href="/blog/index.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><header class="page-heading classic-heading" id="s0"><h1 lang="en" dir="ltr">BLOG</h1></header><div class="blogContent">
 
-<div class="mobileSidebar">
-      <a href="#s1" class="mobileUI"><i class="fa-regular fa-file-lines"></i></a>
-      <a href="#s2" class="mobileUI"><i class="fa-regular fa-square-check"></i></a>
-      <a href="#s3" class="mobileUI"><i class="fa-sharp fa-regular fa-file-zipper"></i></a>
-      <a style="margin:0; color:#fff;" href="#s0"><button id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button></a>
-</div>
-
-    <div class="blogContent">
-    <div class="blogContentNav">
-      <a href="#s1" class="mobileUI"><i class="fa-regular fa-file-lines"></i></a>
-      <a href="#s2" class="mobileUI"><i class="fa-regular fa-square-check"></i></a>
-      <a href="#s3" class="mobileUI"><i class="fa-sharp fa-regular fa-file-zipper"></i></a>
-      <a style="margin:0; color:#fff;" href="#s0"><button id="bttBtn"><i class="fa-solid fa-arrow-up"></i></button></a>
-    </div>
-    <div class="restOfBlog">
-        <div id="s1">
-	<ol class="postsList">
-		<h2>Posts:</h2>
+    <nav class="blog-sidebar" aria-label="Blog sections"><a href="#s1" aria-label="Posts" title="Posts"><svg aria-hidden="true" width="28" height="28" viewbox="0 0 24 24"><use href="/assets/icons/blog-navigation.svg#posts"></use></svg></a><a href="#s2" aria-label="Plans" title="Plans"><svg aria-hidden="true" width="28" height="28" viewbox="0 0 24 24"><use href="/assets/icons/blog-navigation.svg#plans"></use></svg></a><a href="#s3" aria-label="Archive" title="Archive"><svg aria-hidden="true" width="28" height="28" viewbox="0 0 24 24"><use href="/assets/icons/blog-navigation.svg#archive"></use></svg></a><a href="#top" aria-label="Back to top" title="Back to top" class="to-top"><svg aria-hidden="true" width="28" height="28" viewbox="0 0 24 24"><use href="/assets/icons/blog-navigation.svg#top"></use></svg></a></nav><div class="restOfBlog">
+        <section id="s1" aria-labelledby="s1-title">
+	<section class="postsList">
+		<h2 id="s1-title">Posts:</h2>
 		<hr>
-		<li><span class="listBullet">1) </span><a href="/blog/work-on-work.html">أعمال فوق أعمال</a></li>
-		<p>سبب العمل على فلِبنس بارادايس وتصميم فلِبسايت في هذا الوقت، ومستقبل فلِبنس برودكاست</p>
+		<h3 class="post-title">
+<span class="listBullet">1) </span><a href="/blog/work-on-work.html">أعمال فوق أعمال</a>
+</h3>
+		<p class="post-summary" lang="ar" dir="rtl">سبب العمل على فلِبنس بارادايس وتصميم فلِبسايت في هذا الوقت، ومستقبل فلِبنس برودكاست</p>
 		<span class="postInfo">Posted: 29-08-2022 - Personal</span>
 		<!-- <hr class="postsSeperation"> -->
-	</ol>
+	</section>
 
-       <ol class="pinnedPostsList">
+       <section class="pinnedPostsList">
 	       <h2>Pinned posts:</h2>
 	       <hr>
 	       <p style="font-size:20px">(Nothing to pin here yet!)</p>
-       </ol>
-	</div>
-        <div id="s2">
+       </section>
+	</section>
+        <section id="s2" aria-labelledby="s2-title">
             <div class="plansBlock">
-                <h2>Plans:</h2>
+                <h2 id="s2-title">Plans:</h2>
             <p>My current list of plans:</p>
             <hr>
                 <ul>
@@ -63,14 +50,14 @@
                     <li>- Learn the basics of JS.</li>
                     <li>- Complete Flepness Broadcast.</li>
                     <li>- Overcome personal problems mentioned all-over the site.</li>
-                    <li>- Mom, look up for me a god-fearing wife. <span style="color:lightgray;font-size:12px;">Credit: Fawzi ben Gamra.</span>  </li>  
+                    <li>- Mom, look up for me a god-fearing wife. <span style="color:lightgray;font-size:12px;">Credit: Fawzi ben Gamra.</span>  </li>
                 </ul>
-               <p>These plans aren't listed in order, and are to be hit with no exact deadline (some with exceptions), and the list may be tweaked later.</p> 
+               <p>These plans aren't listed in order, and are to be hit with no exact deadline (some with exceptions), and the list may be tweaked later.</p>
         </div>
-        </div>
-        <div id="s3">
+        </section>
+        <section id="s3" aria-labelledby="s3-title">
             <div class="archBlock">
-                <h2>Archive:</h2>
+                <h2 id="s3-title">Archive:</h2>
                 <p>Archived content is old blog posts on Discord pasted from Discord directly as is without editing (except for the 1st two posts), and some of the topics discussed were from my previous self's point of view and are no longer applicable in current times.</p>
                 <hr>
                 <ul>
@@ -79,7 +66,7 @@
                     </li>
 
                     <li>
-                        <a href="https://drive.google.com/file/d/1gQsUw56FbgnfN5Xb2ZAjYrhiCEFWFWUV/viewusp=sharing">- Carelessness</a><p>2020-12-04</p>
+                        <a href="https://drive.google.com/file/d/1gQsUw56FbgnfN5Xb2ZAjYrhiCEFWFWUV/view?usp=sharing">- Carelessness</a><p>2020-12-04</p>
                     </li>
 
                     <li>
@@ -99,46 +86,14 @@
                     </li>
                 </ul>
         </div>
-        </div>
+        </section>
     </div>
     </div>
+</main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+    </div></footer>
 </body>
 </html>

@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/main_css/credits_stylesheet.css">
-    <title>الاعتمادات - فلبسايت</title>
+
+    <title>المصادر والشكر — فلبسايت</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<body>
-<div class="content-wrapper">
-<header>
-    <a href="/index.html"><i class="fa-solid fa-house"></i></a>
-    CREDITS
-    <a href="/about.html"><i class="fa-solid fa-user"></i></a>
-</header>
-    <h2>الموارد المستخدمة:</h2>
+<body class="archive-page page-credits" id="top">
+<a class="skip" href="#main">انتقل إلى المحتوى</a><header class="site-header">
+  <a class="site-brand" href="/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="التنقل الرئيسي"><a href="/">الرئيسية</a><a href="/about.html">عنّي</a><a href="/blog/">المدونة</a><a href="/fp/">أعمالي</a></nav>
+  <a class="language" href="/en/credits.html" lang="en" hreflang="en">English</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading" id="s0"><h1>المصادر والشكر</h1></header><h2>الموارد المستخدمة:</h2>
     <ul class="box">
         الخلفية:
-        <li><a href="https://wallpaperaccess.com/pixel-space">الرابط</a>.</li>
+        <li>
+<a href="https://wallpaperaccess.com/pixel-space">الرابط</a>.</li>
         <hr>
-        البنوط:
-        <li style="font-family:monogram; font-size: 48px;"><span style="font-family:system-ui;">-</span> Monogram.</li>
-        <li style="font-family:Orbitron;"><span style="font-family:system-ui;">-</span> Orbitron.</li>
-        <li style="font-family:Changa;"><span style="font-family:system-ui;">-</span> Changa.</li>
-        <li class="big-font" style="font-family:'Press Start 2P';"><span style="font-family:system-ui; font-size: 32px">- </span>Press Start 2P.</li>
-        <li style="font-family: system-ui;"><span style="font-family:system-ui;">-</span> System fonts.</li>
+        الخطوط:
+        <li style="font-family:monogram; font-size: 48px;">
+<span style="font-family:system-ui;">-</span> Monogram.</li>
+        <li style="font-family:Orbitron;">
+<span style="font-family:system-ui;">-</span> Orbitron.</li>
+        <li style="font-family:Changa;">
+<span style="font-family:system-ui;">-</span> Changa.</li>
+        <li class="big-font" style="font-family:'Press Start 2P';">
+<span style="font-family:system-ui; font-size: 32px">- </span>Press Start 2P.</li>
+        <li style="font-family: system-ui;">
+<span style="font-family:system-ui;">-</span> System fonts.</li>
         <hr>
         الألوان:
         <li><span style="color:#fff; background-color:#1C588C;">1C588C.</span></li>
@@ -37,54 +46,19 @@
         <hr>
         الرموز:
         <li>- <a href="https://fontawesome.com">Font Awesome</a>.</li>
-    </ul>   
+    </ul>
     <h2>معلومات إضافية:</h2>
     <div style="margin-bottom: 50px" class="box">شكرًا لـ:<br>يوتيوبرز تطوير الواجهات الأمامية، وبالأخص:<br>- <a href="https://youtube.com/@KevinPowell">Kevin Powell</a>.<br>- <a href="https://youtube.com/@webdevsimplified">Kyle</a>.
         <br><hr>
         أصدقائي للتغذية الراجعة!
 	<br><hr> <span style="font-size:18px">مشروع <a href="https://gnu.org/">GNU</a> لحفاظكم على أدوات رائعة ومفتوحة المصدر كبرنامج GNU للتلاعب بالصور! والذي من خلاله استطعت إنشاء صور عبر الموقع!</span>
     </div>
+<a class="back-to-top" href="#top">إلى أعلى الصفحة</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>بلال جمال حمدان · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/about.html#contact">للتواصل</a><a href="/credits.html">المصادر والشكر</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
-
-<style>
-h2, footer { font-family:"Changa"; }
-</style>
+    </div></footer>
 </body>
 </html>

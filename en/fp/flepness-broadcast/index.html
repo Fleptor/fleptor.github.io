@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="/assets/files/title-image.png">
-    <link rel="stylesheet" href="/css/fp_css/FB_stylesheet.css">
-    <script src="https://kit.fontawesome.com/d1fd6c7b6f.js" crossorigin="anonymous"></script>
-    <title>Flepness Broadcast - fp</title>
+
+
+    <title>Flepness Broadcast — Flepsite</title>
+<link rel="stylesheet" href="/css/site.css">
+<link rel="stylesheet" href="/css/archive.css">
+<meta name="theme-color" content="#15446e">
+<script src="/js/site.js" defer></script>
 </head>
-<div class="content-wrapper">
-<body>
-    <header>
-        <div class="btnContainer">
-            <div class="goBackBtn"><a href="/en/fp/"><button><i class="fa-solid fa-arrow-left"></i></button></a></div>
-        </div>
-        <div class="heading">
-         <h1 class="fpHeading1">FLEPNESS</h1>
-         <h1 class="fpHeading2">PORTAL</h1>
-        </div>
-    </header>
-        <section class="s1">
+<body class="archive-page page-project" id="top">
+<a class="skip" href="#main">Skip to content</a><header class="site-header">
+  <a class="site-brand" href="/en/" lang="en">FLEPSITE</a>
+  <nav class="site-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/about.html">About</a><a href="/en/blog/">Blog</a><a href="/en/fp/" aria-current="page">Works</a></nav>
+  <a class="language" href="/fp/flepness-broadcast/index.html" lang="ar" hreflang="ar">العربية</a>
+</header><main id="main" class="shell"><div class="content-wrapper">
+<header class="page-heading" id="s0"><a class="back-link" href="/en/fp/">All works</a><h1>Flepness Broadcast</h1></header><section class="s1">
 		<img src="/assets/files/flepness-broadcast-header.png" alt="Flepness Broadcast header picture.">
                 <p>Formerly known as Flepness Paradise Broadcast, Flepness Broadcast or FB is a show founded and hosted by Fleptor and uploaded to Youtube, while being called a 'Broadcast' the actual show isn't live. The show mainly talks about Discord Servers which Fleptor had a role in, thier stories, members, and History. The show is planned to have 14 episodes and is currently in-making.</p>
         </section>
@@ -36,50 +35,19 @@
     </ol>
     <p>As mentioned above, the goal of the show is to make 14 episodes, and we're still on episode #06 because of how past Fleptor used to aproach projects like this or similar because whenever Fleptor gets inspired to start a new project he never thinks it thoroughly to the end, so he would plan to make 14 episodes, actually make the 1st episode, make a 2nd weak episode and stop.<br>The idea is always there, but the strength to tackle on and commit isn't.</p>
 
-		<div style="display:grid; place-items:center;">
-<iframe style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hnLUDsFoHk3Go1DD&amp;list=PL7AiO8qq_hAxTowEUplgDIjDqEBLVw_MD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+		<div>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=hnLUDsFoHk3Go1DD&amp;list=PL7AiO8qq_hAxTowEUplgDIjDqEBLVw_MD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
 		</div>
 
     <h2 class="secondHeading">For now, what is expected regarding FB?</h2>
     <p>The hard reality is nothing, and the reason being that I want to focus on education, but maybe in the future, you'll finally see Fleptor earn that badge.</p>
 </section>
+<a class="back-to-top" href="#top">Back to top</a>
+</div></main><footer class="site-footer"><div class="shell footer-inner">
+      <p>Belal Jamal Hamdan · <time datetime="2026" data-current-year>2026</time></p>
+      <div class="footer-links">
+<a href="/en/about.html#contact">Contact</a><a href="/en/credits.html">Credits</a>
 </div>
-
-<div id="footer"></div>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const lang = document.documentElement.lang || "en";
-
-    fetch('/components/footer.html')
-      .then(res => res.ok ? res.text() : Promise.reject("Failed to load footer"))
-      .then(html => {
-        document.getElementById('footer').innerHTML = html;
-
-        document.querySelectorAll('.footer-lang').forEach(div => {
-          div.style.display = div.dataset.lang === lang ? 'flex' : 'none';
-        });
-
-        const year = new Date().getFullYear();
-        const visibleFooter = document.querySelector(`.footer-lang[data-lang="${lang}"]`);
-        const yearSpan = visibleFooter.querySelector(".footer-year");
-        if (yearSpan) yearSpan.textContent = year;
-
-        const currentPath = window.location.pathname;
-        let targetPath;
-
-        if (lang === 'ar') {
-          targetPath = '/en' + currentPath;
-        } else if (lang === 'en') {
-          targetPath = currentPath.replace(/^\/en/, '') || '/';
-        }
-
-        const langSwitchAnchor = visibleFooter.querySelector('.fa-language')?.closest('a');
-        if (langSwitchAnchor && targetPath) {
-          langSwitchAnchor.setAttribute('href', targetPath);
-        }
-      })
-      .catch(err => console.error("Footer injection error:", err));
-  });
-</script>
+    </div></footer>
 </body>
 </html>

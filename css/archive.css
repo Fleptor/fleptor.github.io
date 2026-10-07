@@ -1,0 +1,62 @@
+/* Existing Flepsite pages keep their articles and artwork in the shared theme. */
+.archive-page .content-wrapper { width: 100%; margin: 0; padding: 0; min-height: 0; display: block; color: white; }
+.archive-page .page-heading { max-width: 900px; margin-inline: auto; }
+.archive-page .page-heading h1 { overflow-wrap: anywhere; }
+.archive-page .page-heading + .subtitle { text-align: center; color: var(--cream); margin-bottom: 24px; }
+.archive-page .content-wrapper > section,
+.archive-page .content-wrapper > .box,
+.archive-page .post-content,
+.archive-page .plansBlock,
+.archive-page .archBlock,
+.archive-page .postsList,
+.archive-page .pinnedPostsList {
+  background: var(--panel); border: 2px solid var(--line);
+  max-width: 900px; margin: 0 auto 24px; padding: 28px;
+}
+.archive-page .content-wrapper > section > img { display: block; margin: 0 auto 24px; border: 1px solid var(--line); }
+.archive-page .content-wrapper p { margin-bottom: 18px; }
+.archive-page .content-wrapper h2 { font-size: 1.65rem; line-height: 1.5; margin-block: 26px 16px; color: var(--cyan); }
+.archive-page .content-wrapper h3 { font-size: 1.3rem; margin-block: 20px 12px; }
+.archive-page .content-wrapper li { margin-bottom: 6px; }
+.archive-page .content-wrapper a { overflow-wrap: anywhere; }
+.archive-page .content-wrapper .secondHeading:empty { display: none; }
+.archive-page .content-wrapper > section > :first-child { margin-top: 0; }
+.archive-page .s2Heading { border-bottom: 1px solid #b3cadc80; padding-bottom: 10px; }
+.archive-page .updates-list { padding-inline-start: 22px; }
+.archive-page .updates-list > li[id] { font-size: 1.4rem; color: var(--cyan); margin-top: 35px; }
+.archive-page .innerList { margin-block: 14px; }
+.archive-page .episode-switcher { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; padding-block: 10px; }
+.archive-page .episode-switcher a { padding: 8px 16px; background: var(--blue); border: 1px solid white; text-decoration: none; }
+.page-episode .s2 img { display: block; width: 100%; }
+.page-portal .places h3 { margin: 0; font-size: 1.15rem; }
+.page-portal .places p { margin: 0; }
+.site-history { max-width: 900px; margin-inline: auto; }
+.site-history figure { margin-block: 24px; }
+.site-history figure img { display: block; width: 100%; border: 1px solid var(--line); }
+.site-history figcaption { font-size: .9375rem; color: var(--muted); margin-top: 10px; }
+.site-history .history-links { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 24px; }
+.page-credits .content-wrapper > h2 { max-width: 900px; margin-inline: auto; padding: 8px 20px; background: #071c30eb; color: white; }
+.page-credits .content-wrapper > .box { list-style: none; }
+/* Keep the handmade Discord profile while applying the same surrounding page. */
+body.page-discord { opacity: 1; transform: none; animation: none; }
+.page-discord .profile, .page-discord .inviteContainer { direction: ltr; color: white; font-family: Changa, sans-serif; }
+.page-discord .profile { margin-block: 10px 100px; }
+.page-discord .content-wrapper > h2, .page-discord .textBlock { max-width: 600px; padding: 14px 22px; margin: 14px auto; background: var(--panel); border: 1px solid var(--line); text-align: center; font-family: var(--font); text-shadow: none; }
+.page-discord .textBlock { font-size: inherit; color: var(--muted); }
+.page-discord .content-wrapper > hr { max-width: 600px; }
+.page-discord .inviteContainer { margin: 24px auto; width: min(100%, 600px); height: auto; padding: 22px; display: grid; grid-template-columns: 60px minmax(0, 1fr); align-items: center; gap: 12px 20px; background: #2b2d31; border: 1px solid #62656b; }
+.page-discord .inviteContainer .inviteMsg { grid-column: 1 / -1; position: static; font: .9375rem var(--font); margin: 0; }
+.page-discord .inviteContainer img { position: static; width: 60px; height: 60px; border-radius: 8px; margin: 0; }
+.page-discord .inviteContainer .serverTitle { position: static; width: auto; margin: 0; font: 700 1.2rem var(--font); }
+.page-discord .inviteContainer > .button { grid-column: 1 / -1; width: fit-content; background: #267c43; }
+@media (max-width: 760px) {
+  .archive-page .content-wrapper > section, .archive-page .content-wrapper > .box,
+  .archive-page .post-content, .archive-page .plansBlock, .archive-page .archBlock,
+  .archive-page .postsList, .archive-page .pinnedPostsList { padding: 20px; }
+  .archive-page .content-wrapper h2 { font-size: 1.4rem; }
+  .page-discord .profile { max-width: 100%; }
+}
+@media (max-width: 420px) {
+  .page-discord .profile .displayName { font-size: 24px; }
+  .page-discord .inviteContainer { width: 100%; max-width: 100%; }
+}
