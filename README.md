@@ -82,3 +82,7 @@ For local preview, run `python scripts/serve.py` from this directory and open
 and assets so edits show up immediately. If switching from the old preview
 server, hard-refresh once to clear any pages already cached by the browser.
 Use `--port 8767` if a different local port is needed.
+
+CIPHER is served by the `Fleptor/cipher` project repository at `/cipher/`.
+The former `/ieee-cs-tech-project/` landing page redirects there, preserving
+query strings and section fragments when JavaScript is available.
